@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+    <style>
+        .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem;
+}
+        .question {
+            margin: 10px 0;
+        }
+        .form-check-inline {
+            margin-right: 10px;
+        }
+        .toggle-collapse {
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border: 1px solid #007bff;
+            padding: 2px 10px;
+            font-size: 0.875rem;
+        }
+        .toggle-collapse:hover {
+            background-color: #e2e6ea;
+        }
+        .toggle-collapse.completed {
+            border-color: #28a745;
+        }
+        .card.completed {
+    background: rgba(0, 255, 0, 0.1);  /* burada seçtiğiniz renge göre ayarlayın */
+}
+    </style>
+</head>
+<body>
+
+<form id="survey-form" class="align-items-center">
+    <div class="container">
+        <h2 class="m-5">Corporate Innovation System and Network Analisys Tool (CISNAT)</h2>
+        <div id="mainAccordion">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6>H1: Şirketin inovasyon kapasitesinin değerlendirilmesi</h6>
+                    <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h1">Soruları Gör</button>
+                </div>
+                <div id="collapse_h1" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
+                    <div class="card-body">
+                        <div class="question">
+                            <p>1. Şirketin inovasyon kapasitesi ve performansına ilişkin bir ön değerlendirme daha önce yapılmıştır.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_1" value="1">
+                                <label class="form-check-label" for="h1q1-1_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_2" value="2">
+                                <label class="form-check-label" for="h1q1-1_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_3" value="3">
+                                <label class="form-check-label" for="h1q1-1_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_4" value="4">
+                                <label class="form-check-label" for="h1q1-1_4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_5" value="5">
+                                <label class="form-check-label" for="h1q1-1_5">5</label>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>2. İnovasyon kapasitesi ve performansı, belli aralıklarla ve belli bir yöntemle değerlendirilmektedir.</p>
+                             <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_1" value="1">
+                                <label class="form-check-label" for="h1q2-2_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_2" value="2">
+                                <label class="form-check-label" for="h1q2-2_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_3" value="3">
+                                <label class="form-check-label" for="h1q2-2_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_4" value="4">
+                                <label class="form-check-label" for="h1q2-2_4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_5" value="5">
+                                <label class="form-check-label" for="h1q2-2_5">5</label>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>3. İnovasyon performansını değerlendirmek üzere makro seviyede ve birimler bazında ölçülebilir hedefler tanımlanmıştır.</p>
+                             <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_1" value="1">
+                                <label class="form-check-label" for="h1q3-3_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_2" value="2">
+                                <label class="form-check-label" for="h1q3-3_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_3" value="3">
+                                <label class="form-check-label" for="h1q3-3_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_4" value="4">
+                                <label class="form-check-label" for="h1q3-3_4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_5" value="5">
+                                <label class="form-check-label" for="h1q3-3_5">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6>H2: Gelişim alanlarına göre, kuruma özgü bir inovasyon sisteminin tasarlanması</h6>
+                        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h2">Soruları Gör</button>
+                    </div>
+                <div id="collapse_h2" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
+                    <div class="card-body">
+                        <div class="question">
+                            <p>4. Söz konusu değerlendirme sonuçlarına göre gerekli iyileştirmeler planlanmakta ve hayata geçirilmektedir.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_1" value="1">
+                                <label class="form-check-label" for="h2q1-4_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_2" value="2">
+                                <label class="form-check-label" for="h2q1-4_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_3" value="3">
+                                <label class="form-check-label" for="h2q1-4_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_4" value="4">
+                                <label class="form-check-label" for="h2q1-4_4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_5" value="5">
+                                <label class="form-check-label" for="h2q1-4_5">5</label>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>5. Şirketin inovasyon yönetimine ilişkin sistematik ve bütünsel bir yaklaşımı ve modeli bulunmaktadır.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_1" value="1">
+                                <label class="form-check-label" for="h2q2-5_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_2" value="2">
+                                <label class="form-check-label" for="h2q2-5_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_3" value="3">
+                                <label class="form-check-label" for="h2q2-5_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_4" value="4">
+                                <label class="form-check-label" for="h2q2-5_4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_5" value="5">
+                                <label class="form-check-label" for="h2q2-5_5">5</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6>H3: Kurumsal inovasyon projesinin iç ve dış iletişim planının ve içeriğinin oluşturulması, bu planın uygulanması</h6>
+                        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h3">Soruları Gör</button>
+                    </div>
+                <div id="collapse_h3" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
+                    <div class="card-body">
+                        <div class="question">
+                            <p>6. Şirketin inovasyon yönetimi sistemi çalışanlarımızla sözlü - yazılı olarak paylaşılmıştır.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_1" value="1">
+                                <label class="form-check-label" for="h3q1-6_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_2" value="2">
+                                <label class="form-check-label" for="h3q1-6_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_3" value="3">
+                                <label class="form-check-label" for="h3q1-6_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_4" value="4">
+                                <label class="form-check-label" for="h3q1-6_4">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_5" value="5">
+                                <label class="form-check-label" for="h3q1-6_5">5</label>
+                            </div>
+
+                        </div>
+                        <div class="question">
+                            <p>7. Şirketin inovasyon yönetimi sistemi ve işleyişi, dış paydaşlarımızla sözlü - yazılı olarak paylaşılmıştır.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_1" value="1">
+                                <label class="form-check-label" for="h3q2-7_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_2" value="2">
+                                <label class="form-check-label" for="h3q2-7_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_3" value="3">
+                                <label class="form-check-label" for="h3q2-7_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_4" value="4">
+                                <label class="form-check-label" for="h3q2-7_4">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_5" value="5">
+                                <label class="form-check-label" for="h3q2-7_5">5</label>
+                            </div>
+
+                        </div>
+                        <div class="question">
+                            <p>8. Üst yönetimin inovasyon konusundaki desteği, çalışanlarımızla sözlü ve yazılı olarak vurgulanmıştır.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_1" value="1">
+                                <label class="form-check-label" for="h3q3-8_1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_2" value="2">
+                                <label class="form-check-label" for="h3q3-8_2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_3" value="3">
+                                <label class="form-check-label" for="h3q3-8_3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_4" value="4">
+                                <label class="form-check-label" for="h3q3-8_4">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_5" value="5">
+                                <label class="form-check-label" for="h3q3-8_5">5</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </div>
+</form>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+    
+            // Soruların yanıtlanması durumunu kontrol eden işlev
+            function checkQuestions() {
+    
+                // Her bir kart için
+                $('.card').each(function() {
+                    // Bu karttaki tüm radyo düğme gruplarını bul
+                    let radioGroups = $(this).find('.card-body').find('.question');
+                    // Varsayılan olarak, tüm soruların yanıtlandığını varsayıyoruz
+                    let allAnswered = true;
+    
+                    // Her bir grup için
+                    radioGroups.each(function() {
+                        // Eğer bu grup için hiçbir radyo düğmesi seçilmemişse, tüm sorular yanıtlanmamış demektir
+                        if ($(this).find('input[type=radio]:checked').length === 0) {
+                            allAnswered = false;
+                        }
+                    });
+    
+                    // Tüm sorular yanıtlanmışsa, düğmenin metnini ve rengini değiştir
+                    if (allAnswered) {
+                        $(this).find('.toggle-collapse').removeClass('btn-primary').addClass('completed btn-success').text("Tamamlandı");
+                    } else {
+                        $(this).find('.toggle-collapse').text('Soruları Gör').removeClass('completed btn-success').addClass('btn-primary');
+                    }
+                });
+            }
+    
+            // Her bir radyo düğmesi için bir click işlemcisi ekleyin
+            $('input[type=radio]').click(checkQuestions);
+    
+            // Sayfa yüklendiğinde kontrol edin (bu, kullanıcının daha önce yanıtladığı soruları hatırlamanızı sağlar)
+            checkQuestions();
+        });
+    </script>
+    <script>
+        $("#survey-form").on("submit", function (event) {
+            event.preventDefault();
+            let formValues = $(this).serializeArray();
+            console.log(formValues); // You can send 'formValues' to your server here
+        });
+    </script>
+</body>
+
+</html>
+
+<script>
+    $('#survey-form').on('submit', function(e) {
+        e.preventDefault();  // prevent the form from being submitted
+        var formData = new FormData(this);
+        for(var pair of formData.entries()) {
+            console.log(pair[0]+ ', '+ pair[1]); 
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
