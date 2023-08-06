@@ -1,271 +1,1510 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Bootstrap CSS -->
+<meta charset="UTF-8">
+<title>Türkiye İnovasyon Haritası</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-
-
-
-    <style>
-        .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10rem;
-}
-        .question {
-            margin: 10px 0;
-        }
-        .form-check-inline {
-            margin-right: 10px;
-        }
-        .toggle-collapse {
-            background-color: #f8f9fa;
-            color: #6c757d;
-            border: 1px solid #007bff;
-            padding: 2px 10px;
-            font-size: 0.875rem;
-        }
-        .toggle-collapse:hover {
-            background-color: #e2e6ea;
-        }
-        .toggle-collapse.completed {
-            border-color: #28a745;
-        }
-        .card.completed {
-    background: rgba(0, 255, 0, 0.1);  /* burada seçtiğiniz renge göre ayarlayın */
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<form id="survey-form" class="align-items-center">
+    <form id="survey-form" class="align-items-center" action="record.php" method="POST">
     <div class="container">
-        <h2 class="m-5">Corporate Innovation System and Network Analisys Tool (CISNAT)</h2>
-        <div id="mainAccordion">
+        <div class="header-container">
+            <h2 class="main-title">Türkiye İnovasyon Haritası</h2>
+        </div>
+        <hr/>
+        <div class="introduction">
+            <h1>Anket Hakkında</h1>
+            <p>Türkiye İnovasyon Haritası, ülkemizde inovasyonun yaygınlaşması, etkin politikaların geliştirilmesi noktasında Türkiye’de inovasyonun geleceğine rehberlik edecek bir çalışmadır. Bu çalışma kapsamında, ülkemizin ihracatçı şirketlerin İnovasyon Kapasitesi özgün bir model kullanılarak (CISNAT) kendi inovasyon kapasitesini tespit edebilecek, karşılaştırmalı analiz raporlarına sahip olacak ve inovasyon kapasitelerini artırmaya yönelik farkındalık ve iyileştirme aksiyonlarına yönelik çalışmalarına yön verecektir.  </p>
+            <p>Anket sonucunuz şirketinize özgü ve sektör kıyaslaması raporuna ulaşmak için e-mail adresinizi bırakabilirsiniz:</p>
+            <input type="email" name="email" placeholder="E-mail adresiniz" class="email-input">
+        </div>
+        <hr/>
+        <h4 class="m justify-content" style="text-decoration: underline;">Birinci Bölüm</h4>
+        <div id="firstAccordion">
+             <div class="card"> 
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6>Organizasyonel Bilgiler</h6>
+                    <button type="button" class="btn toggle-collapse" id="p1_btn" data-toggle="collapse" data-target="#collapse_p1">Soruları Gör</button>
+                </div>
+
+             <div id="collapse_p1" class="collapse" aria-labelledby="headingOne" data-parent="#firstAccordion">
+                <div class="card-body">
+                    <hr/>
+                    <div class="question">
+                        <p><b>1.</b> Şirketiniz yaşı (yıl): </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q1" id="p1q1_1" value="1">
+                            <label class="form-check-label" for="p1q1_1">1-3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q1" id="p1q1_2" value="2">
+                            <label class="form-check-label" for="p1q1_2">3-5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q1" id="p1q1_3" value="3">
+                            <label class="form-check-label" for="p1q1_3">5-10</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q1" id="p1q1_4" value="4">
+                            <label class="form-check-label" for="p1q1_4">10-20</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q1" id="p1q1_5" value="5">
+                            <label class="form-check-label" for="p1q1_5">20+</label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <p><b>2.</b>    Şirketinizdeki beyaz yaka çalışan sayısı:</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q2" id="p1q2_1" value="1">
+                            <label class="form-check-label" for="p1q2_1">1-10</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q2" id="p1q2_2" value="2">
+                            <label class="form-check-label" for="p1q2_2">11-50</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q2" id="p1q2_3" value="3">
+                            <label class="form-check-label" for="p1q2_3">51-250</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q2" id="p1q2_4" value="4">
+                            <label class="form-check-label" for="p1q2_4">250+</label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <p><b>3.</b>    Şirketinizdeki mavi yaka çalışan sayısı: </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q3" id="p1q3_1" value="1">
+                            <label class="form-check-label" for="p1q3_1">1-10</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q3" id="p1q3_2" value="2">
+                            <label class="form-check-label" for="p1q3_2">11-50</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q3" id="p1q3_3" value="3">
+                            <label class="form-check-label" for="p1q3_3">51-250</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q3" id="p1q3_4" value="4">
+                            <label class="form-check-label" for="p1q3_4">250+</label>
+                        </div>
+                    </div>
+                   
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q4"><b>4.</b> Şirket merkezinin bulunduğu şehir:</label>
+                        <div class="form-check ">
+                            <input type="text" id="p1q4" name="p1q4" placeholder="Şehir adını yazın" class="form-control">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q5"><b>5.</b> Şirketiniz bulunduğu sektör nedir? </label>
+                        <div class="form-check ">
+                            <input type="text" id="p1q5" name="p1q5" placeholder="Sektör adını yazınız" class="form-control">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <p><b>6.</b> Anketi dolduranın kişinin ünvanı:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="p1q6" id="p1q6_1" value="CEO/Genel Müdür">
+                            <label class="form-check-label" for="p1q6_1">CEO/Genel Müdür</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="p1q6" id="p1q6_2" value="Direktör">
+                            <label class="form-check-label" for="p1q6_2">Direktör</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="p1q6" id="p1q6_3" value="Birim Yöneticisi/Müdür">
+                            <label class="form-check-label" for="p1q6_3">Birim Yöneticisi/Müdür</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="p1q6" id="p1q6_4" value="Yönetici">
+                            <label class="form-check-label" for="p1q6_4">Yönetici</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="p1q6" id="p1q6_5" value="Diğer" onclick="document.getElementById('otherTitle').disabled = false;">
+                            <label class="form-check-label" for="p1q6_5">Diğer</label>
+                            <input type="text" id="otherTitle" name="otherTitle" disabled placeholder="Lütfen ünvanınızı yazın">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q7"><b>7.</b> Toplam patent/Faydalı Model sayısı:</label>
+                        <div class="form-check">
+                            <input type="number" id="p1q7" name="p1q7" min="0" placeholder="Sayı giriniz" oninput="validateNumber(this)">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q8"><b>8.</b> Kendinize ait toplam marka sayısı:</label>
+                        <div class="form-check">
+                            <input type="number" id="p1q8" name="p1q8" min="0" placeholder="Sayı giriniz" oninput="validateNumber(this)">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q9"><b>9.</b> Yılda ortalama inovasyon ve yeni ürün geliştirme proje sayısı:</label>
+                        <div class="form-check">
+                            <input type="number" id="p1q9" name="p1q9" min="0" placeholder="Sayı giriniz" oninput="validateNumber(this)">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q10"><b>10.</b>   İhracatın toplam satışlardaki oranı (%):</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q10" id="p1q10_1" value="1">
+                            <label class="form-check-label" for="p1q10_1">1-5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q10" id="p1q10_2" value="2">
+                            <label class="form-check-label" for="p1q10_2">6-10</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q10" id="p1q10_3" value="3">
+                            <label class="form-check-label" for="p1q10_3">11-20</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q10" id="p1q10_4" value="4">
+                            <label class="form-check-label" for="p1q10_4">21-50</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q10" id="p1q10_5" value="5">
+                            <label class="form-check-label" for="p1q10_5">51+</label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q12"><b>11.</b> Inovatif ürünlerin/hizmetlerin toplam satışlardaki oranı (%):</label>
+                        <div class="form-check">
+                            <input type="number" id="p1q11" name="p1q11" min="0" placeholder="Sayı giriniz" oninput="validateNumber(this)">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <p><b>12.</b>   Firmanın yerli sermaye yapısı (%):</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q12" id="p1q12_1" value="1">
+                            <label class="form-check-label" for="p1q12_1">100%</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q12" id="p1q12_2" value="2">
+                            <label class="form-check-label" for="p1q12_2">>50%</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1q12" id="p1q12_3" value="3">
+                            <label class="form-check-label" for="p1q12_3"><50%</label>
+                        </div>
+
+                    </div>
+                    <hr/>
+                    <div class="question">
+                        <label for="p1q13"><b>13.</b> İhracat yapılan ülke sayısı: </label>
+                        <div class="form-check">
+                            <input type="number" id="p1q13" name="p1q13" min="0" placeholder="Sayı giriniz" oninput="validateNumber(this)">
+                        </div>
+                    </div>
+                    
+                </div>
+                    <button type="button" class="btn close-accordion" data-toggle="collapse" data-target="#collapse_p1">&uarr;</button>
+                    
+                
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+        <hr/>
+        <h4 class="m justify-content" style="text-decoration: underline;">İkinci Bölüm</h4>
+        <div id="secondAccordion">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h6>H1: Şirketin inovasyon kapasitesinin değerlendirilmesi</h6>
                     <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h1">Soruları Gör</button>
                 </div>
-                <div id="collapse_h1" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
+                <div id="collapse_h1" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
                     <div class="card-body">
-                        <div class="question">
-                            <p>1. Şirketin inovasyon kapasitesi ve performansına ilişkin bir ön değerlendirme daha önce yapılmıştır.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_1" value="1">
-                                <label class="form-check-label" for="h1q1-1_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_2" value="2">
-                                <label class="form-check-label" for="h1q1-1_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_3" value="3">
-                                <label class="form-check-label" for="h1q1-1_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_4" value="4">
-                                <label class="form-check-label" for="h1q1-1_4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q1-1" id="h1q1-1_5" value="5">
-                                <label class="form-check-label" for="h1q1-1_5">5</label>
-                            </div>
-                        </div>
-                        <div class="question">
-                            <p>2. İnovasyon kapasitesi ve performansı, belli aralıklarla ve belli bir yöntemle değerlendirilmektedir.</p>
-                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_1" value="1">
-                                <label class="form-check-label" for="h1q2-2_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_2" value="2">
-                                <label class="form-check-label" for="h1q2-2_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_3" value="3">
-                                <label class="form-check-label" for="h1q2-2_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_4" value="4">
-                                <label class="form-check-label" for="h1q2-2_4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q2-2" id="h1q2-2_5" value="5">
-                                <label class="form-check-label" for="h1q2-2_5">5</label>
-                            </div>
-                        </div>
-                        <div class="question">
-                            <p>3. İnovasyon performansını değerlendirmek üzere makro seviyede ve birimler bazında ölçülebilir hedefler tanımlanmıştır.</p>
-                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_1" value="1">
-                                <label class="form-check-label" for="h1q3-3_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_2" value="2">
-                                <label class="form-check-label" for="h1q3-3_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_3" value="3">
-                                <label class="form-check-label" for="h1q3-3_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_4" value="4">
-                                <label class="form-check-label" for="h1q3-3_4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h1q3-3" id="h1q3-3_5" value="5">
-                                <label class="form-check-label" for="h1q3-3_5">5</label>
-                            </div>
-                        </div>
+                        <table class="question-table">
+                            <tr>
+                                <th></th>
+                                <th>Hiç başlanmadı</th>
+                                <th>Kısmen başlandı</th>
+                                <th>Başlandı</th>
+                                <th>Kısmi tamamlandı</th>
+                                <th>Tamamlandı</th>
+                            </tr>
+                            <tr class="question">
+                                <td><b>1.</b> Şirketin inovasyon kapasitesi ve performansına ilişkin bir ön değerlendirme daha önce yapılmıştır.</td>
+                                <td><input type="radio" name="h1q1" id="h1q1_1" value="1"></td>
+                                <td><input type="radio" name="h1q1" id="h1q1_2" value="2"></td>
+                                <td><input type="radio" name="h1q1" id="h1q1_3" value="3"></td>
+                                <td><input type="radio" name="h1q1" id="h1q1_4" value="4"></td>
+                                <td><input type="radio" name="h1q1" id="h1q1_5" value="5"></td>
+                            </tr>
+                            <tr class="question">
+                                <td><b>2.</b> İnovasyon kapasitesi ve performansı, belli aralıklarla ve belli bir yöntemle değerlendirilmektedir.</td>
+                                <td><input type="radio" name="h1q2" id="h1q2_1" value="1"></td>
+                                <td><input type="radio" name="h1q2" id="h1q2_2" value="2"></td>
+                                <td><input type="radio" name="h1q2" id="h1q2_3" value="3"></td>
+                                <td><input type="radio" name="h1q2" id="h1q2_4" value="4"></td>
+                                <td><input type="radio" name="h1q2" id="h1q2_5" value="5"></td>
+                            </tr>
+                            <tr class="question">
+                                <td><b>3.</b> İnovasyon performansını değerlendirmek üzere makro seviyede ve birimler bazında ölçülebilir hedefler tanımlanmıştır.</td>
+                                <td><input type="radio" name="h1q3" id="h1q3_1" value="1"></td>
+                                <td><input type="radio" name="h1q3" id="h1q3_2" value="2"></td>
+                                <td><input type="radio" name="h1q3" id="h1q3_3" value="3"></td>
+                                <td><input type="radio" name="h1q3" id="h1q3_4" value="4"></td>
+                                <td><input type="radio" name="h1q3" id="h1q3_5" value="5"></td>
+                            </tr>
+                        </table>
+                    </div>
+
                     </div>
                 </div>
-            </div>
+
             <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6>H2: Gelişim alanlarına göre, kuruma özgü bir inovasyon sisteminin tasarlanması</h6>
                         <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h2">Soruları Gör</button>
                     </div>
-                <div id="collapse_h2" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
+                <div id="collapse_h2" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
                     <div class="card-body">
-                        <div class="question">
-                            <p>4. Söz konusu değerlendirme sonuçlarına göre gerekli iyileştirmeler planlanmakta ve hayata geçirilmektedir.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_1" value="1">
-                                <label class="form-check-label" for="h2q1-4_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_2" value="2">
-                                <label class="form-check-label" for="h2q1-4_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_3" value="3">
-                                <label class="form-check-label" for="h2q1-4_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_4" value="4">
-                                <label class="form-check-label" for="h2q1-4_4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q1-4" id="h2q1-4_5" value="5">
-                                <label class="form-check-label" for="h2q1-4_5">5</label>
-                            </div>
-                        </div>
-                        <div class="question">
-                            <p>5. Şirketin inovasyon yönetimine ilişkin sistematik ve bütünsel bir yaklaşımı ve modeli bulunmaktadır.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_1" value="1">
-                                <label class="form-check-label" for="h2q2-5_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_2" value="2">
-                                <label class="form-check-label" for="h2q2-5_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_3" value="3">
-                                <label class="form-check-label" for="h2q2-5_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_4" value="4">
-                                <label class="form-check-label" for="h2q2-5_4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h2q2-5" id="h2q2-5_5" value="5">
-                                <label class="form-check-label" for="h2q2-5_5">5</label>
-                            </div>
-                        </div>
+                        <table class="question-table">
+                            <tr>
+                                <th></th>
+                                <th>Hiç başlanmadı</th>
+                                <th>Kısmen başlandı</th>
+                                <th>Başlandı</th>
+                                <th>Kısmi tamamlandı</th>
+                                <th>Tamamlandı</th>
+                            </tr>
+                            <tr class="question">
+                                <td><b>4.</b> Söz konusu değerlendirme sonuçlarına göre gerekli iyileştirmeler planlanmakta ve hayata geçirilmektedir.</td>
+                                <td><input type="radio" name="h2q1" id="h2q1_1" value="1"></td>
+                                <td><input type="radio" name="h2q1" id="h2q1_2" value="2"></td>
+                                <td><input type="radio" name="h2q1" id="h2q1_3" value="3"></td>
+                                <td><input type="radio" name="h2q1" id="h2q1_4" value="4"></td>
+                                <td><input type="radio" name="h2q1" id="h2q1_5" value="5"></td>
+                            </tr>
+                            <tr class="question">
+                                <td><b>5.</b> Şirketin inovasyon yönetimine ilişkin sistematik ve bütünsel bir yaklaşımı ve modeli bulunmaktadır.</td>
+                                <td><input type="radio" name="h2q2" id="h2q2_1" value="1"></td>
+                                <td><input type="radio" name="h2q2" id="h2q2_2" value="2"></td>
+                                <td><input type="radio" name="h2q2" id="h2q2_3" value="3"></td>
+                                <td><input type="radio" name="h2q2" id="h2q2_4" value="4"></td>
+                                <td><input type="radio" name="h2q2" id="h2q2_5" value="5"></td>
+                            </tr>
+                        </table>
+                    </div>
 
                     </div>
                 </div>
-            </div>
+
+            
             
             <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6>H3: Kurumsal inovasyon projesinin iç ve dış iletişim planının ve içeriğinin oluşturulması, bu planın uygulanması</h6>
                         <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h3">Soruları Gör</button>
                     </div>
-                <div id="collapse_h3" class="collapse" aria-labelledby="headingOne" data-parent="#mainAccordion">
-                    <div class="card-body">
-                        <div class="question">
-                            <p>6. Şirketin inovasyon yönetimi sistemi çalışanlarımızla sözlü - yazılı olarak paylaşılmıştır.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_1" value="1">
-                                <label class="form-check-label" for="h3q1-6_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_2" value="2">
-                                <label class="form-check-label" for="h3q1-6_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_3" value="3">
-                                <label class="form-check-label" for="h3q1-6_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_4" value="4">
-                                <label class="form-check-label" for="h3q1-6_4">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q1-6" id="h3q1-6_5" value="5">
-                                <label class="form-check-label" for="h3q1-6_5">5</label>
-                            </div>
-
+                <div id="collapse_h3" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+                        <div class="card-body">
+                            <table class="question-table">
+                                <tr>
+                                    <th></th>
+                                    <th>Hiç başlanmadı</th>
+                                    <th>Kısmen başlandı</th>
+                                    <th>Başlandı</th>
+                                    <th>Kısmi tamamlandı</th>
+                                    <th>Tamamlandı</th>
+                                </tr>
+                                <tr class="question">
+                                    <td><b>6.</b> Şirketin inovasyon yönetimi sistemi çalışanlarımızla sözlü - yazılı olarak paylaşılmıştır.</td>
+                                    <td><input type="radio" name="h3q1" value="1"></td>
+                                    <td><input type="radio" name="h3q1" value="2"></td>
+                                    <td><input type="radio" name="h3q1" value="3"></td>
+                                    <td><input type="radio" name="h3q1" value="4"></td>
+                                    <td><input type="radio" name="h3q1" value="5"></td>
+                                </tr>
+                                <tr class="question">
+                                    <td><b>7.</b> Şirketin inovasyon yönetimi sistemi ve işleyişi, dış paydaşlarımızla sözlü - yazılı olarak paylaşılmıştır.</td>
+                                    <td><input type="radio" name="h3q2" value="1"></td>
+                                    <td><input type="radio" name="h3q2" value="2"></td>
+                                    <td><input type="radio" name="h3q2" value="3"></td>
+                                    <td><input type="radio" name="h3q2" value="4"></td>
+                                    <td><input type="radio" name="h3q2" value="5"></td>
+                                </tr>
+                                <tr class="question">
+                                    <td><b>8.</b> Üst yönetimin inovasyon konusundaki desteği, çalışanlarımızla sözlü ve yazılı olarak vurgulanmıştır.</td>
+                                    <td><input type="radio" name="h3q3" value="1"></td>
+                                    <td><input type="radio" name="h3q3" value="2"></td>
+                                    <td><input type="radio" name="h3q3" value="3"></td>
+                                    <td><input type="radio" name="h3q3" value="4"></td>
+                                    <td><input type="radio" name="h3q3" value="5"></td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="question">
-                            <p>7. Şirketin inovasyon yönetimi sistemi ve işleyişi, dış paydaşlarımızla sözlü - yazılı olarak paylaşılmıştır.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_1" value="1">
-                                <label class="form-check-label" for="h3q2-7_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_2" value="2">
-                                <label class="form-check-label" for="h3q2-7_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_3" value="3">
-                                <label class="form-check-label" for="h3q2-7_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_4" value="4">
-                                <label class="form-check-label" for="h3q2-7_4">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q2-7" id="h3q2-7_5" value="5">
-                                <label class="form-check-label" for="h3q2-7_5">5</label>
-                            </div>
 
-                        </div>
-                        <div class="question">
-                            <p>8. Üst yönetimin inovasyon konusundaki desteği, çalışanlarımızla sözlü ve yazılı olarak vurgulanmıştır.</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_1" value="1">
-                                <label class="form-check-label" for="h3q3-8_1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_2" value="2">
-                                <label class="form-check-label" for="h3q3-8_2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_3" value="3">
-                                <label class="form-check-label" for="h3q3-8_3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_4" value="4">
-                                <label class="form-check-label" for="h3q3-8_4">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="h3q3-8" id="h3q3-8_5" value="5">
-                                <label class="form-check-label" for="h3q3-8_5">5</label>
-                            </div>
 
-                        </div>
+
                     </div>
+              
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6>H4: Şirketin inovasyon stratejilerinin belirlenmesi</h6>
+                    <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h4">Soruları Gör</button>
                 </div>
+                <div id="collapse_h4" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+                    <div class="card-body">
+                        <table class="question-table">
+                              <tr>
+                                  <th></th>
+                                  <th>Hiç başlanmadı</th>
+                                  <th>Kısmen başlandı</th>
+                                  <th>Başlandı</th>
+                                  <th>Kısmi tamamlandı</th>
+                                  <th>Tamamlandı</th>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>1.</b> Kısa-orta-uzun dönemli iş hedeflerimiz tanımlanmıştır.</td>
+                                  <td><input type="radio" name="h4q1" id="h4q1_1" value="1"></td>
+                                  <td><input type="radio" name="h4q1" id="h4q1_2" value="2"></td>
+                                  <td><input type="radio" name="h4q1" id="h4q1_3" value="3"></td>
+                                  <td><input type="radio" name="h4q1" id="h4q1_4" value="4"></td>
+                                  <td><input type="radio" name="h4q1" id="h4q1_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>2.</b> İş hedeflerimize ulaşmak için stratejilerimiz tanımlanmış ve detaylandırılmıştır.</td>
+                                  <td><input type="radio" name="h4q2" id="h4q2_1" value="1"></td>
+                                  <td><input type="radio" name="h4q2" id="h4q2_2" value="2"></td>
+                                  <td><input type="radio" name="h4q2" id="h4q2_3" value="3"></td>
+                                  <td><input type="radio" name="h4q2" id="h4q2_4" value="4"></td>
+                                  <td><input type="radio" name="h4q2" id="h4q2_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>3.</b> Ürün / teknoloji seviyesinde, yerel / bölgesel / küresel pazarlarda hedeflenen pozisyonlar ve rekabet stratejileri belirlenmiştir. </td>
+                                  <td><input type="radio" name="h4q3" id="h4q3_1" value="1"></td>
+                                  <td><input type="radio" name="h4q3" id="h4q3_2" value="2"></td>
+                                  <td><input type="radio" name="h4q3" id="h4q3_3" value="3"></td>
+                                  <td><input type="radio" name="h4q3" id="h4q3_4" value="4"></td>
+                                  <td><input type="radio" name="h4q3" id="h4q3_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>4.</b> İş hedeflerimizle uyumlu olarak, inovasyon çalışmalarımıza ilişkin beklentilerimiz ve hedeflerimiz belirlenmiştir. </td>
+                                  <td><input type="radio" name="h4q4" id="h4q4_1" value="1"></td>
+                                  <td><input type="radio" name="h4q4" id="h4q4_2" value="2"></td>
+                                  <td><input type="radio" name="h4q4" id="h4q4_3" value="3"></td>
+                                  <td><input type="radio" name="h4q4" id="h4q4_4" value="4"></td>
+                                  <td><input type="radio" name="h4q4" id="h4q4_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>5.</b> İnovasyon stratejilerimiz (hangi inovasyonu, neden, nasıl yapmayı hedefliyoruz?) belirlenmiştir.</td>
+                                  <td><input type="radio" name="h4q5" id="h4q5_1" value="1"></td>
+                                  <td><input type="radio" name="h4q5" id="h4q5_2" value="2"></td>
+                                  <td><input type="radio" name="h4q5" id="h4q5_3" value="3"></td>
+                                  <td><input type="radio" name="h4q5" id="h4q5_4" value="4"></td>
+                                  <td><input type="radio" name="h4q5" id="h4q5_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>6.</b> Şirketin rekabet stratejileri içerisinde "yenilikçilik" tanımlanmıştır. </td>
+                                  <td><input type="radio" name="h4q6" id="h4q6_1" value="1"></td>
+                                  <td><input type="radio" name="h4q6" id="h4q6_2" value="2"></td>
+                                  <td><input type="radio" name="h4q6" id="h4q6_3" value="3"></td>
+                                  <td><input type="radio" name="h4q6" id="h4q6_4" value="4"></td>
+                                  <td><input type="radio" name="h4q6" id="h4q6_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>7.</b> İnovasyon çalışmalarımızda sadece reaktif değil, proaktif strateji benimsenmektedir (müşteri ihtiyaçlarını karşılamaya ek olarak, ihtiyaçları önceden tahmin etmek) </td>
+                                  <td><input type="radio" name="h4q7" id="h4q7_1" value="1"></td>
+                                  <td><input type="radio" name="h4q7" id="h4q7_2" value="2"></td>
+                                  <td><input type="radio" name="h4q7" id="h4q7_3" value="3"></td>
+                                  <td><input type="radio" name="h4q7" id="h4q7_4" value="4"></td>
+                                  <td><input type="radio" name="h4q7" id="h4q7_5" value="5"></td>
+                              </tr>
+                              <tr class="question">
+                                  <td><b>8.</b> Şirketimizin inovasyon stratejileri konusunda tüm çalışanlarımız bilgilendirilmekte ve tam bilgi sahibi olmaları hedeflenmektedir. </td>
+                                  <td><input type="radio" name="h4q8" id="h4q8_1" value="1"></td>
+                                  <td><input type="radio" name="h4q8" id="h4q8_2" value="2"></td>
+                                  <td><input type="radio" name="h4q8" id="h4q8_3" value="3"></td>
+                                  <td><input type="radio" name="h4q8" id="h4q8_4" value="4"></td>
+                                  <td><input type="radio" name="h4q8" id="h4q8_5" value="5"></td>
+                              </tr>
+  
+                          </table>
+                      </div>
+  
+                  </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6>H5: Şirketin teknoloji yol haritasının ve gelecek dönem ihtiyaçlarının belirlenmesi</h6>
+                    <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h5">Soruları Gör</button>
+                </div>
+                <div id="collapse_h5" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+                 <div class="card-body">
+                    <table class="question-table">
+                        <tr>
+                            <th></th>
+                            <th>Hiç başlanmadı</th>
+                            <th>Kısmen başlandı</th>
+                            <th>Başlandı</th>
+                            <th>Kısmi tamamlandı</th>
+                            <th>Tamamlandı</th>
+                        </tr>
+                        <tr class="question">
+                            <td><b>1.</b> Kısa-orta-uzun dönemde müşterinin temel ihtiyaçlarının neler olacağı ve nasıl değişebileceği belirlenmiştir.</td>
+                            <td><input type="radio" name="h5q1" id="h5q1_1" value="1"></td>
+                            <td><input type="radio" name="h5q1" id="h5q1_2" value="2"></td>
+                            <td><input type="radio" name="h5q1" id="h5q1_3" value="3"></td>
+                            <td><input type="radio" name="h5q1" id="h5q1_4" value="4"></td>
+                            <td><input type="radio" name="h5q1" id="h5q1_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>2.</b> Sözkonusu müşteri ihtiyaç ve beklentilerini karşılamak üzere, ne tür ürünler geliştirilmesi gerektiği belirlenmiştir..</td>
+                            <td><input type="radio" name="h5q2" id="h5q2_1" value="1"></td>
+                            <td><input type="radio" name="h5q2" id="h5q2_2" value="2"></td>
+                            <td><input type="radio" name="h5q2" id="h5q2_3" value="3"></td>
+                            <td><input type="radio" name="h5q2" id="h5q2_4" value="4"></td>
+                            <td><input type="radio" name="h5q2" id="h5q2_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>3.</b> Bu ürünleri geliştirmek için gereken kritik teknolojiler ve yetkinlikler belirlenmiştir.</td>
+                            <td><input type="radio" name="h5q3" id="h5q3_1" value="1"></td>
+                            <td><input type="radio" name="h5q3" id="h5q3_2" value="2"></td>
+                            <td><input type="radio" name="h5q3" id="h5q3_3" value="3"></td>
+                            <td><input type="radio" name="h5q3" id="h5q3_4" value="4"></td>
+                            <td><input type="radio" name="h5q3" id="h5q3_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>4.</b> Sözkonusu teknolojileri ve yetkinlikleri geliştirme / kazanım stratejileri belirlenmiştir.</td>
+                            <td><input type="radio" name="h5q4" id="h5q4_1" value="1"></td>
+                            <td><input type="radio" name="h5q4" id="h5q4_2" value="2"></td>
+                            <td><input type="radio" name="h5q4" id="h5q4_3" value="3"></td>
+                            <td><input type="radio" name="h5q4" id="h5q4_4" value="4"></td>
+                            <td><input type="radio" name="h5q4" id="h5q4_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>5.</b> Şirketimizin teknoloji yol haritası, ilgili tüm iç ve dış paydaşlarımızın bilgi ve uzmanlıklarından faydalanılarak hazırlanmıştır. </td>
+                            <td><input type="radio" name="h5q5" id="h5q5_1" value="1"></td>
+                            <td><input type="radio" name="h5q5" id="h5q5_2" value="2"></td>
+                            <td><input type="radio" name="h5q5" id="h5q5_3" value="3"></td>
+                            <td><input type="radio" name="h5q5" id="h5q5_4" value="4"></td>
+                            <td><input type="radio" name="h5q5" id="h5q5_5" value="5"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6>H6: Şirketin mevcut ve gelecek dönem ihtiyaçları baz alınarak, inovasyon proje <br> portföyünün oluşturulması ve önceliklendirilmesi</h6>
+                    <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h6">Soruları Gör</button>
+                </div>
+            <div id="collapse_h6" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+                <div class="card-body">
+                    <table class="question-table">
+                        <tr>
+                            <th></th>
+                            <th>Hiç başlanmadı</th>
+                            <th>Kısmen başlandı</th>
+                            <th>Başlandı</th>
+                            <th>Kısmi tamamlandı</th>
+                            <th>Tamamlandı</th>
+                        </tr>
+                        <tr class="question">
+                            <td><b>1.</b> Yeni - özgün ürünler geliştirmek amacıyla yapılan inovasyon çalışmaları mevcuttur. </td>
+                            <td><input type="radio" name="h6q1" id="h6q1_1" value="1"></td>
+                            <td><input type="radio" name="h6q1" id="h6q1_2" value="2"></td>
+                            <td><input type="radio" name="h6q1" id="h6q1_3" value="3"></td>
+                            <td><input type="radio" name="h6q1" id="h6q1_4" value="4"></td>
+                            <td><input type="radio" name="h6q1" id="h6q1_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>2.</b> Mevcut ürünlerin iyileştirilmesi amacıyla yapılan inovasyon çalışmaları mevcuttur. </td>
+                            <td><input type="radio" name="h6q2" id="h6q2_1" value="1"></td>
+                            <td><input type="radio" name="h6q2" id="h6q2_2" value="2"></td>
+                            <td><input type="radio" name="h6q2" id="h6q2_3" value="3"></td>
+                            <td><input type="radio" name="h6q2" id="h6q2_4" value="4"></td>
+                            <td><input type="radio" name="h6q2" id="h6q2_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>3.</b> Yeni süreçler geliştirme amacıyla yapılan inovasyon çalışmaları mevcuttur. </td>
+                            <td><input type="radio" name="h6q3" id="h6q3_1" value="1"></td>
+                            <td><input type="radio" name="h6q3" id="h6q3_2" value="2"></td>
+                            <td><input type="radio" name="h6q3" id="h6q3_3" value="3"></td>
+                            <td><input type="radio" name="h6q3" id="h6q3_4" value="4"></td>
+                            <td><input type="radio" name="h6q3" id="h6q3_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>4.</b> Mevcut süreçlerin sürekli iyileştirilmesi amacıyla yapılan inovasyon çalışmaları mevcuttur. </td>
+                            <td><input type="radio" name="h6q4" id="h6q4_1" value="1"></td>
+                            <td><input type="radio" name="h6q4" id="h6q4_2" value="2"></td>
+                            <td><input type="radio" name="h6q4" id="h6q4_3" value="3"></td>
+                            <td><input type="radio" name="h6q4" id="h6q4_4" value="4"></td>
+                            <td><input type="radio" name="h6q4" id="h6q4_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>5.</b> Mevcut pazarlama - satış süreçlerinin iyileştirilmesi amacıyla yapılan inovasyon çalışmaları mevcuttur.   </td>
+                            <td><input type="radio" name="h6q5" id="h6q5_1" value="1"></td>
+                            <td><input type="radio" name="h6q5" id="h6q5_2" value="2"></td>
+                            <td><input type="radio" name="h6q5" id="h6q5_3" value="3"></td>
+                            <td><input type="radio" name="h6q5" id="h6q5_4" value="4"></td>
+                            <td><input type="radio" name="h6q5" id="h6q5_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>6.</b> İç organizasyonumuz ve dış paydaşlarımızla ilişkilerimizde yeni modeller geliştirme amacıyla yapılan inovasyon çalışmaları mevcuttur.  </td>
+                            <td><input type="radio" name="h6q6" id="h6q6_1" value="1"></td>
+                            <td><input type="radio" name="h6q6" id="h6q6_2" value="2"></td>
+                            <td><input type="radio" name="h6q6" id="h6q6_3" value="3"></td>
+                            <td><input type="radio" name="h6q6" id="h6q6_4" value="4"></td>
+                            <td><input type="radio" name="h6q6" id="h6q6_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>7.</b> Mevcut organizasyonel modellerin iyileştirilmesi amacıyla yapılan inovasyon çalışmaları mevcuttur.  </td>
+                            <td><input type="radio" name="h6q7" id="h6q7_1" value="1"></td>
+                            <td><input type="radio" name="h6q7" id="h6q7_2" value="2"></td>
+                            <td><input type="radio" name="h6q7" id="h6q7_3" value="3"></td>
+                            <td><input type="radio" name="h6q7" id="h6q7_4" value="4"></td>
+                            <td><input type="radio" name="h6q7" id="h6q7_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>8.</b> Yeni iş modelleri geliştirme amacıyla yapılan inovasyon çalışmaları mevcuttur.  </td>
+                            <td><input type="radio" name="h6q8" id="h6q8_1" value="1"></td>
+                            <td><input type="radio" name="h6q8" id="h6q8_2" value="2"></td>
+                            <td><input type="radio" name="h6q8" id="h6q8_3" value="3"></td>
+                            <td><input type="radio" name="h6q8" id="h6q8_4" value="4"></td>
+                            <td><input type="radio" name="h6q8" id="h6q8_5" value="5"></td>
+                        </tr>
+    
+                        <tr class="question">
+                            <td><b>9.</b> Mevcut iş modellerinin iyileştirilmesi amacıyla yapılan inovasyon çalışmaları mevcuttur. </td>
+                            <td><input type="radio" name="h6q9" id="h6q9_1" value="1"></td>
+                            <td><input type="radio" name="h6q9" id="h6q9_2" value="2"></td>
+                            <td><input type="radio" name="h6q9" id="h6q9_3" value="3"></td>
+                            <td><input type="radio" name="h6q9" id="h6q9_4" value="4"></td>
+                            <td><input type="radio" name="h6q9" id="h6q9_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>10.</b> Tüm birimlerin mevcut ve gelecek dönem kritik ihtiyaçları / problemleri belirlenmiş ve şirketin "kritik problem havuzu" oluşturulmuştur. </td>
+                            <td><input type="radio" name="h6q10" id="h6q10_1" value="1"></td>
+                            <td><input type="radio" name="h6q10" id="h6q10_2" value="2"></td>
+                            <td><input type="radio" name="h6q10" id="h6q10_3" value="3"></td>
+                            <td><input type="radio" name="h6q10" id="h6q10_4" value="4"></td>
+                            <td><input type="radio" name="h6q10" id="h6q10_5" value="5"></td>
+                        </tr>
+                        <tr class="question">
+                            <td><b>11.</b> Şirketinizin kısa-orta-uzun dönemde odaklanacağı inovasyon alanları ve inovasyon projeleri, iş ve inovasyon hedeflerimizle uyumlu olacak şekilde tanımlanmıştır.  </td>
+                            <td><input type="radio" name="h6q11" id="h6q11_1" value="1"></td>
+                            <td><input type="radio" name="h6q11" id="h6q11_2" value="2"></td>
+                            <td><input type="radio" name="h6q11" id="h6q11_3" value="3"></td>
+                            <td><input type="radio" name="h6q11" id="h6q11_4" value="4"></td>
+                            <td><input type="radio" name="h6q11" id="h6q11_5" value="5"></td>
+                        </tr>
+                    </table>
+                </div>
+    
+            </div>
+    
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6>H7: Şirketin inovasyon organizasyonunun belirlenmesi</h6>
+                <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h7">Soruları Gör</button>
+            </div>
+            <div id="collapse_h7" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+                <div class="card-body">
+                    <table class="question-table">
+                          <tr>
+                              <th></th>
+                              <th>Hiç başlanmadı</th>
+                              <th>Kısmen başlandı</th>
+                              <th>Başlandı</th>
+                              <th>Kısmi tamamlandı</th>
+                              <th>Tamamlandı</th>
+                          </tr>
+                          <tr class="question">
+                              <td><b>1.</b> İnovasyon yönetiminden ve farklı birimlerdeki inovasyon süreçlerinin koordinasyonundan sorumlu bir birim bulunmaktadır..</td>
+                              <td><input type="radio" name="h7q1" id="h7q1_1" value="1"></td>
+                              <td><input type="radio" name="h7q1" id="h7q1_2" value="2"></td>
+                              <td><input type="radio" name="h7q1" id="h7q1_3" value="3"></td>
+                              <td><input type="radio" name="h7q1" id="h74q1_4" value="4"></td>
+                              <td><input type="radio" name="h7q1" id="h74q1_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>2.</b> İnovasyon yönetiminden sorumlu birim, ilgili tüm diğer birimlerle koordineli olarak çalışabilmektedir.</td>
+                              <td><input type="radio" name="h7q2" id="h7q2_1" value="1"></td>
+                              <td><input type="radio" name="h7q2" id="h7q2_2" value="2"></td>
+                              <td><input type="radio" name="h7q2" id="h7q2_3" value="3"></td>
+                              <td><input type="radio" name="h7q2" id="h7q2_4" value="4"></td>
+                              <td><input type="radio" name="h7q2" id="h7q2_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>3.</b> İnovasyon stratejilerinin oluşturulması, inovasyon faaliyetlerinin planlanması ve etkinliğinin değerlendirilmesinden sorumlu bir birim / kurul / kişi bulunmaktadır.  </td>
+                              <td><input type="radio" name="h7q3" id="h7q3_1" value="1"></td>
+                              <td><input type="radio" name="h7q3" id="h7q3_2" value="2"></td>
+                              <td><input type="radio" name="h7q3" id="h7q3_3" value="3"></td>
+                              <td><input type="radio" name="h7q3" id="h7q3_4" value="4"></td>
+                              <td><input type="radio" name="h7q3" id="h7q3_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>4.</b> Ar-Ge'den sorumlu bir birim / merkez bulunmaktadır. </td>
+                              <td><input type="radio" name="h7q4" id="h7q4_1" value="1"></td>
+                              <td><input type="radio" name="h7q4" id="h7q4_2" value="2"></td>
+                              <td><input type="radio" name="h7q4" id="h7q4_3" value="3"></td>
+                              <td><input type="radio" name="h7q4" id="h7q4_4" value="4"></td>
+                              <td><input type="radio" name="h7q4" id="h7q4_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>5.</b> İnovasyon süreçlerine ilgili tüm birimler (Ürün Geliştirme, Ar-Ge, Pazarlama, Satış, İK vs.) etkin şekilde destek vermektedir. </td>
+                              <td><input type="radio" name="h7q5" id="h7q5_1" value="1"></td>
+                              <td><input type="radio" name="h7q5" id="h7q5_2" value="2"></td>
+                              <td><input type="radio" name="h7q5" id="h7q5_3" value="3"></td>
+                              <td><input type="radio" name="h7q5" id="h7q5_4" value="4"></td>
+                              <td><input type="radio" name="h7q5" id="h7q5_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>6.</b> İnovasyon süreçlerinin yönetiminde görev alan birim, kişi ve çalışma gruplarının görev ve sorumlulukları, hedef ve başarı kriterleri tanımlanmıştır. </td>
+                              <td><input type="radio" name="h7q6" id="h7q6_1" value="1"></td>
+                              <td><input type="radio" name="h7q6" id="h7q6_2" value="2"></td>
+                              <td><input type="radio" name="h7q6" id="h7q6_3" value="3"></td>
+                              <td><input type="radio" name="h7q6" id="h7q6_4" value="4"></td>
+                              <td><input type="radio" name="h7q6" id="h7q6_5" value="5"></td>
+                          </tr>
+                          <tr class="question">
+                              <td><b>7.</b> İnovasyon süreçlerinin, diğer iş süreçleriyle entegrasyonu tanımlanmıştır. </td>
+                              <td><input type="radio" name="h7q7" id="h7q7_1" value="1"></td>
+                              <td><input type="radio" name="h7q7" id="h7q7_2" value="2"></td>
+                              <td><input type="radio" name="h7q7" id="h7q7_3" value="3"></td>
+                              <td><input type="radio" name="h7q7" id="h7q7_4" value="4"></td>
+                              <td><input type="radio" name="h7q7" id="h7q7_5" value="5"></td>
+                          </tr>
+
+                      </table>
+                  </div>
+
+              </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6>H8: Şirketin inovasyon yönetimi yönergesinin hazırlanması ve süreçlerin tarif edilmesi,</h6>
+                <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h8">Soruları Gör</button>
+            </div>
+            <div id="collapse_h8" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+             <div class="card-body">
+                <table class="question-table">
+                    <tr>
+                        <th></th>
+                        <th>Hiç başlanmadı</th>
+                        <th>Kısmen başlandı</th>
+                        <th>Başlandı</th>
+                        <th>Kısmi tamamlandı</th>
+                        <th>Tamamlandı</th>
+                    </tr>
+                    <tr class="question">
+                        <td><b>1.</b> İnovasyon süreçlerinin işleyişini tarif eden bir inovasyon yönergesi hazırlanmıştır.</td>
+                        <td><input type="radio" name="h8q1" id="h8q1_1" value="1"></td>
+                        <td><input type="radio" name="h8q1" id="h8q1_2" value="2"></td>
+                        <td><input type="radio" name="h8q1" id="h8q1_3" value="3"></td>
+                        <td><input type="radio" name="h8q1" id="h8q1_4" value="4"></td>
+                        <td><input type="radio" name="h8q1" id="h8q1_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>2.</b> İnovasyon yönergesi şirket çalışanlarıyla paylaşılmış ve gerekli bilgilendirme sözlü ve yazılı olarak yapılmıştır.</td>
+                        <td><input type="radio" name="h8q2" id="h8q2_1" value="1"></td>
+                        <td><input type="radio" name="h8q2" id="h8q2_2" value="2"></td>
+                        <td><input type="radio" name="h8q2" id="h8q2_3" value="3"></td>
+                        <td><input type="radio" name="h8q2" id="h8q2_4" value="4"></td>
+                        <td><input type="radio" name="h8q2" id="h8q2_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>3.</b> İnovasyon yönergesi, ilgili süreçlerin gerçekleştirilmesi, yönetimi ve takibi için aktif olarak kullanılmaktadır</td>
+                        <td><input type="radio" name="h8q3" id="h8q3_1" value="1"></td>
+                        <td><input type="radio" name="h8q3" id="h8q3_2" value="2"></td>
+                        <td><input type="radio" name="h8q3" id="h8q3_3" value="3"></td>
+                        <td><input type="radio" name="h8q3" id="h8q3_4" value="4"></td>
+                        <td><input type="radio" name="h8q3" id="h8q3_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>4.</b> Şirkette işe yeni başlayan çalışanlara, inovasyon süreçlerinin işleyişine dair gerekli oryantasyon eğitim ve bilgilendirmeleri yapılmaktadır. </td>
+                        <td><input type="radio" name="h8q4" id="h8q4_1" value="1"></td>
+                        <td><input type="radio" name="h8q4" id="h8q4_2" value="2"></td>
+                        <td><input type="radio" name="h8q4" id="h8q4_3" value="3"></td>
+                        <td><input type="radio" name="h8q4" id="h8q4_4" value="4"></td>
+                        <td><input type="radio" name="h8q4" id="h8q4_5" value="5"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6>H9: Tüm şirket çalışanlarının katkıda bulunacağı fikir ve öneri havuzunun oluşturulması </h6>
+                <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h9">Soruları Gör</button>
+            </div>
+        <div id="collapse_h9" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+            <div class="card-body">
+                <table class="question-table">
+                    <tr>
+                        <th></th>
+                        <th>Hiç başlanmadı</th>
+                        <th>Kısmen başlandı</th>
+                        <th>Başlandı</th>
+                        <th>Kısmi tamamlandı</th>
+                        <th>Tamamlandı</th>
+                    </tr>
+                    <tr class="question">
+                        <td><b>1.</b> Beyaz yakalı çalışanların, yenilikçi önerilerini paylaşabilmelerini ve bu önerilerin arşivlenmesini sağlayacak bir platform bulunmaktadır.</td>
+                        <td><input type="radio" name="h9q1" id="h9q1_1" value="1"></td>
+                        <td><input type="radio" name="h9q1" id="h9q1_2" value="2"></td>
+                        <td><input type="radio" name="h9q1" id="h9q1_3" value="3"></td>
+                        <td><input type="radio" name="h9q1" id="h9q1_4" value="4"></td>
+                        <td><input type="radio" name="h9q1" id="h9q1_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>2.</b> Mavi yakalı çalışanların, yenilikçi önerilerini paylaşabilmelerini ve bu önerilerin arşivlenmesini sağlayacak bir platform bulunmaktadır.</td>
+                        <td><input type="radio" name="h9q2" id="h9q2_1" value="1"></td>
+                        <td><input type="radio" name="h9q2" id="h9q2_2" value="2"></td>
+                        <td><input type="radio" name="h9q2" id="h9q2_3" value="3"></td>
+                        <td><input type="radio" name="h9q2" id="h9q2_4" value="4"></td>
+                        <td><input type="radio" name="h9q2" id="h9q2_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>3.</b> Paylaşılan öneriler, belli bir kurul tarafından belli bir sürede ve belli kriterlere göre değerlendirilmektedir.</td>
+                        <td><input type="radio" name="h9q3" id="h9q3_1" value="1"></td>
+                        <td><input type="radio" name="h9q3" id="h9q3_2" value="2"></td>
+                        <td><input type="radio" name="h9q3" id="h9q3_3" value="3"></td>
+                        <td><input type="radio" name="h9q3" id="h9q3_4" value="4"></td>
+                        <td><input type="radio" name="h9q3" id="h9q3_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>4.</b> Fikir bildirim süreçleri, değerlendirme yöntemi ve kriterleri tüm şirket çalışanlarıyla şeffaf olarak paylaşılmıştır.</td>
+                        <td><input type="radio" name="h9q4" id="h9q4_1" value="1"></td>
+                        <td><input type="radio" name="h9q4" id="h9q4_2" value="2"></td>
+                        <td><input type="radio" name="h9q4" id="h9q4_3" value="3"></td>
+                        <td><input type="radio" name="h9q4" id="h9q4_4" value="4"></td>
+                        <td><input type="radio" name="h9q4" id="h9q4_5" value="5"></td>
+                    </tr>
+                    <tr class="question">
+                        <td><b>5.</b> Seçilen ve seçilmeyen fikrilerin sahiplerine geri bildirimler yapılmaktadır.  </td>
+                        <td><input type="radio" name="h9q5" id="h9q5_1" value="1"></td>
+                        <td><input type="radio" name="h9q5" id="h9q5_2" value="2"></td>
+                        <td><input type="radio" name="h9q5" id="h9q5_3" value="3"></td>
+                        <td><input type="radio" name="h9q5" id="h9q5_4" value="4"></td>
+                        <td><input type="radio" name="h9q5" id="h9q5_5" value="5"></td>
+                    </tr>
+                </table>
             </div>
 
         </div>
-        
+
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h6>H10: Takdir ve ödüllendirme sisteminin oluşturulması </h6>
+            <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h10">Soruları Gör</button>
+        </div>
+    <div id="collapse_h10" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                <tr>
+                    <th></th>
+                    <th>Hiç başlanmadı</th>
+                    <th>Kısmen başlandı</th>
+                    <th>Başlandı</th>
+                    <th>Kısmi tamamlandı</th>
+                    <th>Tamamlandı</th>
+                </tr>
+                <tr class="question">
+                    <td><b>1.</b> Yenilikçi fikir ve önerilerini paylaşan çalışanlara yönelik maddi ödüllendirme mekanizması bulunmakta ve çalıştırılmaktadır.</td>
+                    <td><input type="radio" name="h10q1" id="h10q1_1" value="1"></td>
+                    <td><input type="radio" name="h10q1" id="h10q1_2" value="2"></td>
+                    <td><input type="radio" name="h10q1" id="h10q1_3" value="3"></td>
+                    <td><input type="radio" name="h10q1" id="h10q1_4" value="4"></td>
+                    <td><input type="radio" name="h10q1" id="h10q1_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>2.</b> Yenilikçi fikir ve önerilerini paylaşan çalışanlara yönelik manevi ödüllendirme mekanizması bulunmakta ve çalıştırılmaktadır.</td>
+                    <td><input type="radio" name="h10q2" id="h10q2_1" value="1"></td>
+                    <td><input type="radio" name="h10q2" id="h10q2_2" value="2"></td>
+                    <td><input type="radio" name="h10q2" id="h10q2_3" value="3"></td>
+                    <td><input type="radio" name="h10q2" id="h10q2_4" value="4"></td>
+                    <td><input type="radio" name="h10q2" id="h10q2_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>3.</b> Beyaz yakalı çalışanların inovasyon süreçlerine yapmış oldukları katkı, yıllık performans değerlendirmelerine, atama ve yükseltme kriterlerine yansıtılmaktadır. </td>
+                    <td><input type="radio" name="h10q3" id="h10q3_1" value="1"></td>
+                    <td><input type="radio" name="h10q3" id="h10q3_2" value="2"></td>
+                    <td><input type="radio" name="h10q3" id="h10q3_3" value="3"></td>
+                    <td><input type="radio" name="h10q3" id="h10q3_4" value="4"></td>
+                    <td><input type="radio" name="h10q3" id="h10q3_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>4.</b> Mavi yakalı çalışanların inovasyon süreçlerine yapmış oldukları katkı, yıllık performans değerlendirmelerine, atama ve yükseltme kriterlerine yansıtılmaktadır. </td>
+                    <td><input type="radio" name="h10q4" id="h10q4_1" value="1"></td>
+                    <td><input type="radio" name="h10q4" id="h10q4_2" value="2"></td>
+                    <td><input type="radio" name="h10q4" id="h10q4_3" value="3"></td>
+                    <td><input type="radio" name="h10q4" id="h10q4_4" value="4"></td>
+                    <td><input type="radio" name="h10q4" id="h10q4_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>5.</b> Takdir ödüllendirme sistemimiz, bireysel performans yerine, takım çalışmasını özendirmeyi hedeflemektedir.  </td>
+                    <td><input type="radio" name="h10q5" id="h10q5_1" value="1"></td>
+                    <td><input type="radio" name="h10q5" id="h10q5_2" value="2"></td>
+                    <td><input type="radio" name="h10q5" id="h10q5_3" value="3"></td>
+                    <td><input type="radio" name="h10q5" id="h10q5_4" value="4"></td>
+                    <td><input type="radio" name="h10q5" id="h10q5_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>6.</b> Takdir ödüllendirme sistemimiz, sadece fikir üretmek yerine, fikrin hayata geçirilmesini özendirmek üzere tasarlanmıştır.  </td>
+                    <td><input type="radio" name="h10q6" id="h10q6_1" value="1"></td>
+                    <td><input type="radio" name="h10q6" id="h10q6_2" value="2"></td>
+                    <td><input type="radio" name="h10q6" id="h10q6_3" value="3"></td>
+                    <td><input type="radio" name="h10q6" id="h10q6_4" value="4"></td>
+                    <td><input type="radio" name="h10q6" id="h10q6_5" value="5"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H11: Şirketin İK yönetim uygulamalarına inovasyonun entegrasyonu</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h11">Soruları Gör</button>
+    </div>
+    <div id="collapse_h11" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                  <tr>
+                      <th></th>
+                      <th>Hiç başlanmadı</th>
+                      <th>Kısmen başlandı</th>
+                      <th>Başlandı</th>
+                      <th>Kısmi tamamlandı</th>
+                      <th>Tamamlandı</th>
+                  </tr>
+                  <tr class="question">
+                      <td><b>1.</b> Şirketin vizyonunda yenilikçilik kavramı kuvvetle vurgulanmaktadır. </td>
+                      <td><input type="radio" name="h11q1" id="h11q1_1" value="1"></td>
+                      <td><input type="radio" name="h11q1" id="h11q1_2" value="2"></td>
+                      <td><input type="radio" name="h11q1" id="h11q1_3" value="3"></td>
+                      <td><input type="radio" name="h11q1" id="h11q1_4" value="4"></td>
+                      <td><input type="radio" name="h11q1" id="h11q1_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>2.</b> Şirketin değerleri arasında, yenilikçilik kavramı kuvvetle vurgulanmaktadır. </td>
+                      <td><input type="radio" name="h11q2" id="h11q2_1" value="1"></td>
+                      <td><input type="radio" name="h11q2" id="h11q2_2" value="2"></td>
+                      <td><input type="radio" name="h11q2" id="h11q2_3" value="3"></td>
+                      <td><input type="radio" name="h11q2" id="h11q2_4" value="4"></td>
+                      <td><input type="radio" name="h11q2" id="h11q2_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>3.</b> İşe alım süreçlerinde, adayların yenilikçi / yaratıcı potansiyellerini değerlendirmeye yönelik yöntemler kullanılmaktadır.  </td>
+                      <td><input type="radio" name="h11q3" id="h11q3_1" value="1"></td>
+                      <td><input type="radio" name="h11q3" id="h11q3_2" value="2"></td>
+                      <td><input type="radio" name="h11q3" id="h11q3_3" value="3"></td>
+                      <td><input type="radio" name="h11q3" id="h11q3_4" value="4"></td>
+                      <td><input type="radio" name="h11q3" id="h11q3_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>4.</b> Şirket çalışanlarımızın inovasyon süreçlerine ilişkin yetkinlik değerlendirmesi yapılmış ve gelişim alanları belirlenmiştir.. </td>
+                      <td><input type="radio" name="h11q4" id="h11q4_1" value="1"></td>
+                      <td><input type="radio" name="h11q4" id="h11q4_2" value="2"></td>
+                      <td><input type="radio" name="h11q4" id="h11q4_3" value="3"></td>
+                      <td><input type="radio" name="h11q4" id="h11q4_4" value="4"></td>
+                      <td><input type="radio" name="h11q4" id="h11q4_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>5.</b> Çalışanlarımızın inovasyon süreçlerine aktif katılımını ve motivasyonlarını arttırmaya yönelik uygulamalarımız bulunmaktadır.  </td>
+                      <td><input type="radio" name="h11q5" id="h11q5_1" value="1"></td>
+                      <td><input type="radio" name="h11q5" id="h11q5_2" value="2"></td>
+                      <td><input type="radio" name="h11q5" id="h11q5_3" value="3"></td>
+                      <td><input type="radio" name="h11q5" id="h11q5_4" value="4"></td>
+                      <td><input type="radio" name="h11q5" id="h11q5_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>6.</b> Ofis alanları ve ortak mekanlar, çalışanların yaratıcı motivasyonlarını destekleyecek şekilde düzenlenmiştir. </td>
+                      <td><input type="radio" name="h11q6" id="h11q6_1" value="1"></td>
+                      <td><input type="radio" name="h11q6" id="h11q6_2" value="2"></td>
+                      <td><input type="radio" name="h11q6" id="h11q6_3" value="3"></td>
+                      <td><input type="radio" name="h11q6" id="h11q6_4" value="4"></td>
+                      <td><input type="radio" name="h11q6" id="h11q6_5" value="5"></td>
+                  </tr>
+              </table>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H12: Şirket içi işbirliği ve bilgi paylaşımını besleyici uygulamaların  geliştirilmesi, kurumsal hafıza <br>yönetiminin sağlanması</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h12">Soruları Gör</button>
+    </div>
+    <div id="collapse_h12" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+     <div class="card-body">
+        <table class="question-table">
+            <tr>
+                <th></th>
+                <th>Hiç başlanmadı</th>
+                <th>Kısmen başlandı</th>
+                <th>Başlandı</th>
+                <th>Kısmi tamamlandı</th>
+                <th>Tamamlandı</th>
+            </tr>
+            <tr class="question">
+                <td><b>1.</b> Kurumsal hafızanın kayıt altına alınması, şirket içerisinde gerektiği durumlarda etkin şekilde paylaşılması, yedeklenmesi ve korunmasıyla ilgili bilgi yönetimi yaklaşımı ve uygulamaları bulunmaktadır. </td>
+                <td><input type="radio" name="h12q1" id="h12q1_1" value="1"></td>
+                <td><input type="radio" name="h12q1" id="h12q1_2" value="2"></td>
+                <td><input type="radio" name="h12q1" id="h12q1_3" value="3"></td>
+                <td><input type="radio" name="h12q1" id="h12q1_4" value="4"></td>
+                <td><input type="radio" name="h12q1" id="h12q1_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>2.</b> İnovasyon projelerinde, geçmiş başarılı ve başarısız projelerdeki deneyimin aktarılmasını sağlayacak mekanizmalar mevcuttur..</td>
+                <td><input type="radio" name="h12q2" id="h12q2_1" value="1"></td>
+                <td><input type="radio" name="h12q2" id="h12q2_2" value="2"></td>
+                <td><input type="radio" name="h12q2" id="h12q2_3" value="3"></td>
+                <td><input type="radio" name="h12q2" id="h12q2_4" value="4"></td>
+                <td><input type="radio" name="h12q2" id="h12q2_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>3.</b> İnovasyon süreçlerinde farklı birimlerin işbirliğini ve bilgi paylaşımını sağlayacak uygulamalar bulunmaktadır. </td>
+                <td><input type="radio" name="h12q3" id="h12q3_1" value="1"></td>
+                <td><input type="radio" name="h12q3" id="h12q3_2" value="2"></td>
+                <td><input type="radio" name="h12q3" id="h12q3_3" value="3"></td>
+                <td><input type="radio" name="h12q3" id="h12q3_4" value="4"></td>
+                <td><input type="radio" name="h12q3" id="h12q3_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>4.</b> İnovasyon çalışmaları, süreçler ve sonuçlar hakkında tüm çalışanları bilgilendirmek üzere yapılan sistemli iç iletişim çalışmaları bulunmaktadır.  </td>
+                <td><input type="radio" name="h12q4" id="h12q4_1" value="1"></td>
+                <td><input type="radio" name="h12q4" id="h12q4_2" value="2"></td>
+                <td><input type="radio" name="h12q4" id="h12q4_3" value="3"></td>
+                <td><input type="radio" name="h12q4" id="h12q4_4" value="4"></td>
+                <td><input type="radio" name="h12q4" id="h12q4_5" value="5"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H13: Inovasyon yönetim sürecinin adımları konusunda iç yetkinlik oluşturmaya yönelik, farklı konularda eğitimler verilmesi </h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h13">Soruları Gör</button>
+    </div>
+<div id="collapse_h13" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+    <div class="card-body">
+        <table class="question-table">
+            <tr>
+                <th></th>
+                <th>Hiç başlanmadı</th>
+                <th>Kısmen başlandı</th>
+                <th>Başlandı</th>
+                <th>Kısmi tamamlandı</th>
+                <th>Tamamlandı</th>
+            </tr>
+            <tr class="question">
+                <td><b>1.</b> Üst yönetimin (direktör seviyesi) yenilikçi yetkinliklerini geliştirmeleri amacıyla eğitim faaliyetleri düzenlenmektedir. </td>
+                <td><input type="radio" name="h13q1" id="h13q1_1" value="1"></td>
+                <td><input type="radio" name="h13q1" id="h13q1_2" value="2"></td>
+                <td><input type="radio" name="h13q1" id="h13q1_3" value="3"></td>
+                <td><input type="radio" name="h13q1" id="h13q1_4" value="4"></td>
+                <td><input type="radio" name="h13q1" id="h13q1_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>2.</b> Orta kademe yöneticilerin yenilikçi yetkinliklerini geliştirmeleri amacıyla eğitim faaliyetleri düzenlenmektedir. .</td>
+                <td><input type="radio" name="h13q2" id="h13q2_1" value="1"></td>
+                <td><input type="radio" name="h13q2" id="h13q2_2" value="2"></td>
+                <td><input type="radio" name="h13q2" id="h13q2_3" value="3"></td>
+                <td><input type="radio" name="h13q2" id="h13q2_4" value="4"></td>
+                <td><input type="radio" name="h13q2" id="h13q2_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>3.</b> Uzman seviyesindeki beyaz yakalı personelin yenilikçi yetkinliklerini geliştirmeleri amacıyla eğitim faaliyetleri düzenlenmektedir. </td>
+                <td><input type="radio" name="h13q3" id="h13q3_1" value="1"></td>
+                <td><input type="radio" name="h13q3" id="h13q3_2" value="2"></td>
+                <td><input type="radio" name="h13q3" id="h13q3_3" value="3"></td>
+                <td><input type="radio" name="h13q3" id="h13q3_4" value="4"></td>
+                <td><input type="radio" name="h13q3" id="h13q3_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>4.</b> Mavi yakalı personelin yenilikçi yetkinliklerini geliştirmeleri amacıyla eğitim faaliyetleri düzenlenmektedir.</td>
+                <td><input type="radio" name="h13q4" id="h13q4_1" value="1"></td>
+                <td><input type="radio" name="h13q4" id="h13q4_2" value="2"></td>
+                <td><input type="radio" name="h13q4" id="h13q4_3" value="3"></td>
+                <td><input type="radio" name="h13q4" id="h13q4_4" value="4"></td>
+                <td><input type="radio" name="h13q4" id="h13q4_5" value="5"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H14: Önceliklendirilmiş inovasyon projeleri için takımların oluşturulması</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h14">Soruları Gör</button>
+    </div>
+    <div id="collapse_h14" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                  <tr>
+                      <th></th>
+                      <th>Hiç başlanmadı</th>
+                      <th>Kısmen başlandı</th>
+                      <th>Başlandı</th>
+                      <th>Kısmi tamamlandı</th>
+                      <th>Tamamlandı</th>
+                  </tr>
+                  <tr class="question">
+                      <td><b>1.</b> Yenilikçi fikirleri hayata geçirmek üzere, farklı birimlerin katılımıyla inovasyon proje takımları oluşturulmaktadır. </td>
+                      <td><input type="radio" name="h14q1" id="h14q1_1" value="1"></td>
+                      <td><input type="radio" name="h14q1" id="h14q1_2" value="2"></td>
+                      <td><input type="radio" name="h14q1" id="h14q1_3" value="3"></td>
+                      <td><input type="radio" name="h14q1" id="h14q1_4" value="4"></td>
+                      <td><input type="radio" name="h14q1" id="h14q1_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>2.</b> Çalışanlarımızın inovasyon proje takımlarına aktif katılım sağlamaları için kendilerine zaman ve fırsat verilmektedir. </td>
+                      <td><input type="radio" name="h14q2" id="h14q2_1" value="1"></td>
+                      <td><input type="radio" name="h14q2" id="h14q2_2" value="2"></td>
+                      <td><input type="radio" name="h14q2" id="h14q2_3" value="3"></td>
+                      <td><input type="radio" name="h14q2" id="h14q2_4" value="4"></td>
+                      <td><input type="radio" name="h14q2" id="h14q2_5" value="5"></td>
+                  </tr>
+              </table>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H15: Inovasyon projelerinin yönetimi; problem tanımlama - araştırma - analiz - karar verme - test uygulama - <br> nihai uygulama aşamalarının gerçekleştirilmesi</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h15">Soruları Gör</button>
+    </div>
+    <div id="collapse_h15" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+     <div class="card-body">
+        <table class="question-table">
+            <tr>
+                <th></th>
+                <th>Hiç başlanmadı</th>
+                <th>Kısmen başlandı</th>
+                <th>Başlandı</th>
+                <th>Kısmi tamamlandı</th>
+                <th>Tamamlandı</th>
+            </tr>
+            <tr class="question">
+                <td><b>1.</b> Müşterinin mevcut ihtiyaçlarının belirlenmesi ve gelişim alanlarının tespiti amacıyla yapılan sistematik çalışmalar bulunmaktadır. </td>
+                <td><input type="radio" name="h15q1" id="h15q1_1" value="1"></td>
+                <td><input type="radio" name="h15q1" id="h15q1_2" value="2"></td>
+                <td><input type="radio" name="h15q1" id="h15q1_3" value="3"></td>
+                <td><input type="radio" name="h15q1" id="h15q1_4" value="4"></td>
+                <td><input type="radio" name="h15q1" id="h15q1_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>2.</b> Müşteri eğilimlerindeki değişimin takibi sistematik olarak yapılır. </td>
+                <td><input type="radio" name="h15q2" id="h15q2_1" value="1"></td>
+                <td><input type="radio" name="h15q2" id="h15q2_2" value="2"></td>
+                <td><input type="radio" name="h15q2" id="h15q2_3" value="3"></td>
+                <td><input type="radio" name="h15q2" id="h15q2_4" value="4"></td>
+                <td><input type="radio" name="h15q2" id="h15q2_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>3.</b> Tekniğin bilinen son durumunu öğrenmek, teknolojideki gelişmeleri ve fırsatları yakından takip etmek amacıyla yürütülen sistematik çalışmalar bulunmaktadır.  </td>
+                <td><input type="radio" name="h15q3" id="h15q3_1" value="1"></td>
+                <td><input type="radio" name="h15q3" id="h15q3_2" value="2"></td>
+                <td><input type="radio" name="h15q3" id="h15q3_3" value="3"></td>
+                <td><input type="radio" name="h15q3" id="h15q3_4" value="4"></td>
+                <td><input type="radio" name="h15q3" id="h15q3_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>4.</b> Sektörümüzdeki kritik teknolojilere ilişkin patentler sistematik olarak takip edilmekte ve değerlendirilmektedir. </td>
+                <td><input type="radio" name="h15q4" id="h15q4_1" value="1"></td>
+                <td><input type="radio" name="h15q4" id="h15q4_2" value="2"></td>
+                <td><input type="radio" name="h15q4" id="h15q4_3" value="3"></td>
+                <td><input type="radio" name="h15q4" id="h15q4_4" value="4"></td>
+                <td><input type="radio" name="h15q4" id="h15q4_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>5.</b> Gerek ihtiyaç tespiti, gerekse yenilikçi çözümler geliştirmede, "veri yönetimi" yaklaşımı etkin olarak kullanılmaktadır. (Şirketin hedefleri için kritik önem taşıyan veriler tespit edilmekte, veriler etkin olarak toplanmakta ve analiz edilerek yenilikçi uygulamalar geliştirmek üzere kullanılmaktadır.)   </td>
+                <td><input type="radio" name="h15q5" id="h15q5_1" value="1"></td>
+                <td><input type="radio" name="h15q5" id="h15q5_2" value="2"></td>
+                <td><input type="radio" name="h15q5" id="h15q5_3" value="3"></td>
+                <td><input type="radio" name="h15q5" id="h15q5_4" value="4"></td>
+                <td><input type="radio" name="h15q5" id="h15q5_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>6.</b> Yenilikçi fikirler üretmek üzere belli yöntem ve araçlar kullanılmaktadır.   </td>
+                <td><input type="radio" name="h15q6" id="h15q6_1" value="1"></td>
+                <td><input type="radio" name="h15q6" id="h15q6_2" value="2"></td>
+                <td><input type="radio" name="h15q6" id="h15q6_3" value="3"></td>
+                <td><input type="radio" name="h15q6" id="h15q6_4" value="4"></td>
+                <td><input type="radio" name="h15q6" id="h15q6_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>7.</b> Yenilikçi fikirler üretmek üzere, farklı birimlerin katılımıyla yapılan ortak çalışmalar bulunmaktadır.  </td>
+                <td><input type="radio" name="h15q7" id="h15q7_1" value="1"></td>
+                <td><input type="radio" name="h15q7" id="h15q7_2" value="2"></td>
+                <td><input type="radio" name="h15q7" id="h15q7_3" value="3"></td>
+                <td><input type="radio" name="h15q7" id="h15q7_4" value="4"></td>
+                <td><input type="radio" name="h15q7" id="h15q7_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>8.</b> Yenilikçi fikirler ve çözüm alternatifleri arasında seçim yapmak üzere kullanılan yöntem ve araçlar bulunmaktadır.   </td>
+                <td><input type="radio" name="h15q8" id="h15q8_1" value="1"></td>
+                <td><input type="radio" name="h15q8" id="h15q8_2" value="2"></td>
+                <td><input type="radio" name="h15q8" id="h15q8_3" value="3"></td>
+                <td><input type="radio" name="h15q8" id="h15q8_4" value="4"></td>
+                <td><input type="radio" name="h15q8" id="h15q8_5" value="5"></td>
+            </tr>
+
+            <tr class="question">
+                <td><b>9.</b> Yenilikçi fikirleri projelendirerek hayata geçirmek üzere kullanılan belli sistem ve yöntemler bulunmaktadır.  </td>
+                <td><input type="radio" name="h15q9" id="h15q9_1" value="1"></td>
+                <td><input type="radio" name="h15q9" id="h15q9_2" value="2"></td>
+                <td><input type="radio" name="h15q9" id="h15q9_3" value="3"></td>
+                <td><input type="radio" name="h15q9" id="h15q9_4" value="4"></td>
+                <td><input type="radio" name="h15q9" id="h15q9_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>10.</b> İnovasyon projelerinin yürütülmesi ve hayata geçirilmesi süreçlerine üst yönetim aktif olarak katılmakta ve destek vermektedir. </td>
+                <td><input type="radio" name="h15q10" id="h15q10_1" value="1"></td>
+                <td><input type="radio" name="h15q10" id="h15q10_2" value="2"></td>
+                <td><input type="radio" name="h15q10" id="h15q10_3" value="3"></td>
+                <td><input type="radio" name="h15q10" id="h15q10_4" value="4"></td>
+                <td><input type="radio" name="h15q10" id="h15q10_5" value="5"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H16: Şirketin dış paydaşlarıyla işbirliğine dayalı inovasyon süreçlerinin tariflenmesi, oluşturulması ve yönetimi</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h16">Soruları Gör</button>
+    </div>
+    <div id="collapse_h16" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                  <tr>
+                      <th></th>
+                      <th>Hiç başlanmadı</th>
+                      <th>Kısmen başlandı</th>
+                      <th>Başlandı</th>
+                      <th>Kısmi tamamlandı</th>
+                      <th>Tamamlandı</th>
+                  </tr>
+                  <tr class="question">
+                      <td><b>1.</b> Şirketin dış paydaşlarıyla (müşterileri, tedarikçileri, rakipleri, üniversiteler vs.) hangi alanlarda işbirliği yapması gerektiğiyle ilgili bir ihtiyaç analizi yapılmıştır. . </td>
+                      <td><input type="radio" name="h16q1" id="h16q1_1" value="1"></td>
+                      <td><input type="radio" name="h16q1" id="h16q1_2" value="2"></td>
+                      <td><input type="radio" name="h16q1" id="h16q1_3" value="3"></td>
+                      <td><input type="radio" name="h16q1" id="h16q1_4" value="4"></td>
+                      <td><input type="radio" name="h16q1" id="h16q1_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>2.</b> Potansiyel işbirliği ortakları derinlemesine araştırılmış ve belirlenmiştir.  </td>
+                      <td><input type="radio" name="h16q2" id="h16q2_1" value="1"></td>
+                      <td><input type="radio" name="h16q2" id="h16q2_2" value="2"></td>
+                      <td><input type="radio" name="h16q2" id="h16q2_3" value="3"></td>
+                      <td><input type="radio" name="h16q2" id="h16q2_4" value="4"></td>
+                      <td><input type="radio" name="h16q2" id="h16q2_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>3.</b> Dış paydaşlarla yapılacak işbirliklerinin yönetim süreçleri tanımlanmış ve uygulanmaktadır.  </td>
+                      <td><input type="radio" name="h16q3" id="h16q3_1" value="1"></td>
+                      <td><input type="radio" name="h16q3" id="h16q3_2" value="2"></td>
+                      <td><input type="radio" name="h16q3" id="h16q3_3" value="3"></td>
+                      <td><input type="radio" name="h16q3" id="h16q3_4" value="4"></td>
+                      <td><input type="radio" name="h16q3" id="h16q3_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>4.</b> Müşterilerimizle inovasyona yönelik etkin işbirlikleri yapılmakta, müşterilerimizden edinilen öneriler, bilgi ve deneyimler inovasyon süreçlerine dahil edilmektedir. </td>
+                      <td><input type="radio" name="h16q4" id="h16q4_1" value="1"></td>
+                      <td><input type="radio" name="h16q4" id="h16q4_2" value="2"></td>
+                      <td><input type="radio" name="h16q4" id="h16q4_3" value="3"></td>
+                      <td><input type="radio" name="h16q4" id="h16q4_4" value="4"></td>
+                      <td><input type="radio" name="h16q4" id="h16q4_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>5.</b> Tedarikçilerimizle inovasyona yönelik etkin işbirlikleri yapılmaktadır.   </td>
+                      <td><input type="radio" name="h16q5" id="h16q5_1" value="1"></td>
+                      <td><input type="radio" name="h16q5" id="h16q5_2" value="2"></td>
+                      <td><input type="radio" name="h16q5" id="h16q5_3" value="3"></td>
+                      <td><input type="radio" name="h16q5" id="h16q5_4" value="4"></td>
+                      <td><input type="radio" name="h16q5" id="h16q5_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>6.</b> Rakiplerimizle inovasyona yönelik etkin rekabet öncesi işbirlikleri yapılmaktadır.  </td>
+                      <td><input type="radio" name="h16q6" id="h16q6_1" value="1"></td>
+                      <td><input type="radio" name="h16q6" id="h16q6_2" value="2"></td>
+                      <td><input type="radio" name="h16q6" id="h16q6_3" value="3"></td>
+                      <td><input type="radio" name="h16q6" id="h16q6_4" value="4"></td>
+                      <td><input type="radio" name="h16q6" id="h16q6_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                   <td><b>7.</b> Alanımızdaki yeni girişimler (start-up'lar) sistematik olarak takip edilmekte ve işbirliği olanakları araştırılmaktadır.  </td>
+                   <td><input type="radio" name="h16q7" id="h16q7_1" value="1"></td>
+                   <td><input type="radio" name="h16q7" id="h16q7_2" value="2"></td>
+                   <td><input type="radio" name="h16q7" id="h16q7_3" value="3"></td>
+                   <td><input type="radio" name="h16q7" id="h16q7_4" value="4"></td>
+                   <td><input type="radio" name="h16q7" id="h16q7_5" value="5"></td>
+               </tr>
+               <tr class="question">
+                   <td><b>8.</b> Çalışanlarımızın sektörümüz ve faaliyet alanlarımız dışındaki yenilikçi iş modeli önerilerini desteklemek üzere risk sermayesi destek olanakları sağlanmaktadır.  </td>
+                   <td><input type="radio" name="h16q8" id="h16q8_1" value="1"></td>
+                   <td><input type="radio" name="h16q8" id="h16q8_2" value="2"></td>
+                   <td><input type="radio" name="h16q8" id="h16q8_3" value="3"></td>
+                   <td><input type="radio" name="h16q8" id="h16q8_4" value="4"></td>
+                   <td><input type="radio" name="h16q8" id="h16q8_5" value="5"></td>
+               </tr>
+              </table>
+           </div>
+       </div>
+       </div>
+
+       <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h6>H17: Fikri mülkiyet hakları yönergesinin hazırlanması</h6>
+            <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h17">Soruları Gör</button>
+        </div>
+        <div id="collapse_h17" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+         <div class="card-body">
+            <table class="question-table">
+                <tr>
+                    <th></th>
+                    <th>Hiç başlanmadı</th>
+                    <th>Kısmen başlandı</th>
+                    <th>Başlandı</th>
+                    <th>Kısmi tamamlandı</th>
+                    <th>Tamamlandı</th>
+                </tr>
+                <tr class="question">
+                    <td><b>1.</b> Geliştirilen yenilikçi fikirlerin fikri mülkiyet hakları araştırılmakta ve gerekli görülmesi durumunda korunmaktadır. </td>
+                    <td><input type="radio" name="h17q1" id="h17q1_1" value="1"></td>
+                    <td><input type="radio" name="h17q1" id="h17q1_2" value="2"></td>
+                    <td><input type="radio" name="h17q1" id="h17q1_3" value="3"></td>
+                    <td><input type="radio" name="h17q1" id="h17q1_4" value="4"></td>
+                    <td><input type="radio" name="h17q1" id="h17q1_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>2.</b> Fikri Mülkiyet haklarının yönetilmesine ilişkin stratejiler ve süreçler tanımlanmıştır.</td>
+                    <td><input type="radio" name="h17q2" id="h17q2_1" value="1"></td>
+                    <td><input type="radio" name="h17q2" id="h17q2_2" value="2"></td>
+                    <td><input type="radio" name="h17q2" id="h17q2_3" value="3"></td>
+                    <td><input type="radio" name="h17q2" id="h17q2_4" value="4"></td>
+                    <td><input type="radio" name="h17q2" id="h17q2_5" value="5"></td>
+                </tr>
+                <tr class="question">
+                    <td><b>3.</b> Şirketin sahip olduğu fikri mülkiyetlerin değerlemesinin (valuation) yapılması için sistematik süreçler ve yönrtemler tanınmıştır. </td>
+                    <td><input type="radio" name="h17q3" id="h17q3_1" value="1"></td>
+                    <td><input type="radio" name="h17q3" id="h17q3_2" value="2"></td>
+                    <td><input type="radio" name="h17q3" id="h17q3_3" value="3"></td>
+                    <td><input type="radio" name="h17q3" id="h17q3_4" value="4"></td>
+                    <td><input type="radio" name="h17q3" id="h17q3_5" value="5"></td>
+                </tr>
+            </table>
+         </div>
+     </div>
+     </div>
+
+     <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h6>H18: Üniversite-Sanayi İşbirliklerine dayalı Ar-Ge projelerinin tanımlanması </h6>
+            <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h18">Soruları Gör</button>
+        </div>
+    <div id="collapse_h18" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                <tr>
+                    <th></th>
+                    <th>Hiç başlanmadı</th>
+                    <th>Kısmen başlandı</th>
+                    <th>Başlandı</th>
+                    <th>Kısmi tamamlandı</th>
+                    <th>Tamamlandı</th>
+                </tr>
+                <tr class="question">
+                 <td><b>1.</b> Ulusal üniversiteler ve araştırma kuruluşlarıyla yürütülen inovasyon projeleri bulunmaktadır. </td>
+                 <td><input type="radio" name="h18q1" id="h18q1_1" value="1"></td>
+                 <td><input type="radio" name="h18q1" id="h18q1_2" value="2"></td>
+                 <td><input type="radio" name="h18q1" id="h18q1_3" value="3"></td>
+                 <td><input type="radio" name="h18q1" id="h18q1_4" value="4"></td>
+                 <td><input type="radio" name="h18q1" id="h18q1_5" value="5"></td>
+             </tr>
+             <tr class="question">
+                 <td><b>2.</b> Üniversitelerden inovasyona yönelik danışmanlık hizmeti alınmaktadır.   </td>
+                 <td><input type="radio" name="h18q2" id="h18q2_1" value="1"></td>
+                 <td><input type="radio" name="h18q2" id="h18q2_2" value="2"></td>
+                 <td><input type="radio" name="h18q2" id="h18q2_3" value="3"></td>
+                 <td><input type="radio" name="h18q2" id="h18q2_4" value="4"></td>
+                 <td><input type="radio" name="h18q2" id="h18q2_5" value="5"></td>
+             </tr>
+             <tr class="question">
+                 <td><b>3.</b> Üniversitelerden inovasyona yönelik eğitim / yetkinlik geliştirme hizmetleri alınmaktadır.  </td>
+                 <td><input type="radio" name="h18q3" id="h18q3_1" value="1"></td>
+                 <td><input type="radio" name="h18q3" id="h18q3_2" value="2"></td>
+                 <td><input type="radio" name="h18q3" id="h18q3_3" value="3"></td>
+                 <td><input type="radio" name="h18q3" id="h18q3_4" value="4"></td>
+                 <td><input type="radio" name="h18q3" id="h18q3_5" value="5"></td>
+             </tr>
+             <tr class="question">
+                 <td><b>4.</b> Uluslararası üniversiteler ve araştırma kuruluşlarıyla yürütülen inovasyon projeleri bulunmaktadır. </td>
+                 <td><input type="radio" name="h18q4" id="h18q4_1" value="1"></td>
+                 <td><input type="radio" name="h18q4" id="h18q4_2" value="2"></td>
+                 <td><input type="radio" name="h18q4" id="h18q4_3" value="3"></td>
+                 <td><input type="radio" name="h18q4" id="h18q4_4" value="4"></td>
+                 <td><input type="radio" name="h18q4" id="h18q4_5" value="5"></td>
+             </tr>
+             <tr class="question">
+                 <td><b>5.</b> Hangi üniversite ve araştırmacılarla işbirliği yapılabileceğine ilişkin bir veri tabanımız bulunmakta ve güncellenmektedir.   </td>
+                 <td><input type="radio" name="h18q5" id="h18q5_1" value="1"></td>
+                 <td><input type="radio" name="h18q5" id="h18q5_2" value="2"></td>
+                 <td><input type="radio" name="h18q5" id="h18q5_3" value="3"></td>
+                 <td><input type="radio" name="h18q5" id="h18q5_4" value="4"></td>
+                 <td><input type="radio" name="h18q5" id="h18q5_5" value="5"></td>
+             </tr>
+             <tr class="question">
+                 <td><b>6.</b> Üniversitelerin laboratuvar imkanlarından faydalanmaya yönelik işbirliklerimiz vardır. </td>
+                 <td><input type="radio" name="h18q6" id="h18q6_1" value="1"></td>
+                 <td><input type="radio" name="h18q6" id="h18q6_2" value="2"></td>
+                 <td><input type="radio" name="h18q6" id="h18q6_3" value="3"></td>
+                 <td><input type="radio" name="h18q6" id="h18q6_4" value="4"></td>
+                 <td><input type="radio" name="h18q6" id="h18q6_5" value="5"></td>
+             </tr>
+             <tr class="question">
+              <td><b>7.</b> Doktora seviyesinde araştırmacıların istihdamı konusunda üniversitelerle işbirliklerimiz bulunmaktadır.  </td>
+              <td><input type="radio" name="h18q7" id="h18q7_1" value="1"></td>
+              <td><input type="radio" name="h18q7" id="h18q7_2" value="2"></td>
+              <td><input type="radio" name="h18q7" id="h18q7_3" value="3"></td>
+              <td><input type="radio" name="h18q7" id="h18q7_4" value="4"></td>
+              <td><input type="radio" name="h18q7" id="h18q7_5" value="5"></td>
+          </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H19: İnovasyon bütçesinin oluşturulması, iç ve dış finansman kaynaklarından faydalanılmasının sağlanması</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h19">Soruları Gör</button>
+    </div>
+    <div id="collapse_h19" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+        <div class="card-body">
+            <table class="question-table">
+                  <tr>
+                      <th></th>
+                      <th>Hiç başlanmadı</th>
+                      <th>Kısmen başlandı</th>
+                      <th>Başlandı</th>
+                      <th>Kısmi tamamlandı</th>
+                      <th>Tamamlandı</th>
+                  </tr>
+                  <tr class="question">
+                      <td><b>1.</b> Şirketimizde inovasyon çalışmaları için ayrılmış ve kullanılmakta olan bir bütçe tanımlanmıştır. </td>
+                      <td><input type="radio" name="h19q1" id="h19q1_1" value="1"></td>
+                      <td><input type="radio" name="h19q1" id="h19q1_2" value="2"></td>
+                      <td><input type="radio" name="h19q1" id="h19q1_3" value="3"></td>
+                      <td><input type="radio" name="h19q1" id="h19q1_4" value="4"></td>
+                      <td><input type="radio" name="h19q1" id="h19q1_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>2.</b> İnovasyona yönelik ulusal finansman ve destek fırsatlarından etkin biçimde faydalanılmaktadır.  </td>
+                      <td><input type="radio" name="h19q2" id="h19q2_1" value="1"></td>
+                      <td><input type="radio" name="h19q2" id="h19q2_2" value="2"></td>
+                      <td><input type="radio" name="h19q2" id="h19q2_3" value="3"></td>
+                      <td><input type="radio" name="h19q2" id="h19q2_4" value="4"></td>
+                      <td><input type="radio" name="h19q2" id="h19q2_5" value="5"></td>
+                  </tr>
+                  <tr class="question">
+                      <td><b>3.</b> İnovasyona yönelik uluslararası finansman ve destek fırsatlarından etkin biçimde faydalanılmaktadır.   </td>
+                      <td><input type="radio" name="h19q3" id="h19q3_1" value="1"></td>
+                      <td><input type="radio" name="h19q3" id="h19q3_2" value="2"></td>
+                      <td><input type="radio" name="h19q3" id="h19q3_3" value="3"></td>
+                      <td><input type="radio" name="h19q3" id="h19q3_4" value="4"></td>
+                      <td><input type="radio" name="h19q3" id="h19q3_5" value="5"></td>
+                  </tr>
+              </table>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6>H20: Kurumsal inovasyon sistemindeki gelişimin izlenmesi, değerlendirilmesi ve revizyonu.</h6>
+        <button type="button" class="btn toggle-collapse" data-toggle="collapse" data-target="#collapse_h20">Soruları Gör</button>
+    </div>
+    <div id="collapse_h20" class="collapse" aria-labelledby="headingOne" data-parent="#secondAccordion">
+     <div class="card-body">
+        <table class="question-table">
+            <tr>
+                <th></th>
+                <th>Hiç başlanmadı</th>
+                <th>Kısmen başlandı</th>
+                <th>Başlandı</th>
+                <th>Kısmi tamamlandı</th>
+                <th>Tamamlandı</th>
+            </tr>
+            <tr class="question">
+                <td><b>1.</b> İnovasyon faaliyetlerinin yarattığı katma değer (ciroya, karlılığa, pazar payına, müşteri memnuniyetine, ihrataca vs. katkısı) sistematik olarak ölçülmekte ve değerlendirilmektedir. </td>
+                <td><input type="radio" name="h20q1" id="h20q1_1" value="1"></td>
+                <td><input type="radio" name="h20q1" id="h20q1_2" value="2"></td>
+                <td><input type="radio" name="h20q1" id="h20q1_3" value="3"></td>
+                <td><input type="radio" name="h20q1" id="h20q1_4" value="4"></td>
+                <td><input type="radio" name="h20q1" id="h20q1_5" value="5"></td>
+            </tr>
+            <tr class="question">
+                <td><b>2.</b> İnovasyon yatırımlarımız ve çalışmalarımız, şirketimiz için hissedilir ölçüde katma değer yaratmaktadır.</td>
+                <td><input type="radio" name="h20q2" id="h20q2_1" value="1"></td>
+                <td><input type="radio" name="h20q2" id="h20q2_2" value="2"></td>
+                <td><input type="radio" name="h20q2" id="h20q2_3" value="3"></td>
+                <td><input type="radio" name="h20q2" id="h20q2_4" value="4"></td>
+                <td><input type="radio" name="h20q2" id="h20q2_5" value="5"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+
+        </div>
+        </div>
+        <hr/>
     </div>
     <div class="button-container">
         <button type="submit" class="btn btn-primary">Gönder</button>
@@ -273,70 +1512,154 @@
 </form>
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-    
-            // Soruların yanıtlanması durumunu kontrol eden işlev
-            function checkQuestions() {
-    
-                // Her bir kart için
-                $('.card').each(function() {
-                    // Bu karttaki tüm radyo düğme gruplarını bul
-                    let radioGroups = $(this).find('.card-body').find('.question');
-                    // Varsayılan olarak, tüm soruların yanıtlandığını varsayıyoruz
-                    let allAnswered = true;
-    
-                    // Her bir grup için
-                    radioGroups.each(function() {
-                        // Eğer bu grup için hiçbir radyo düğmesi seçilmemişse, tüm sorular yanıtlanmamış demektir
-                        if ($(this).find('input[type=radio]:checked').length === 0) {
-                            allAnswered = false;
-                        }
-                    });
-    
-                    // Tüm sorular yanıtlanmışsa, düğmenin metnini ve rengini değiştir
-                    if (allAnswered) {
-                        $(this).find('.toggle-collapse').removeClass('btn-primary').addClass('completed btn-success').text("Tamamlandı");
-                    } else {
-                        $(this).find('.toggle-collapse').text('Soruları Gör').removeClass('completed btn-success').addClass('btn-primary');
-                    }
-                });
-            }
-    
-            // Her bir radyo düğmesi için bir click işlemcisi ekleyin
-            $('input[type=radio]').click(checkQuestions);
-    
-            // Sayfa yüklendiğinde kontrol edin (bu, kullanıcının daha önce yanıtladığı soruları hatırlamanızı sağlar)
-            checkQuestions();
-        });
-    </script>
-    <script>
-        $("#survey-form").on("submit", function (event) {
-            event.preventDefault();
-            let formValues = $(this).serializeArray();
-            console.log(formValues); // You can send 'formValues' to your server here
-        });
-    </script>
-</body>
-
-</html>
+        $( function() {
+            var availableCities = [     "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", 
+    "Antalya", "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt",
+    "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", 
+    "Çorum", "Denizli", "Diyarbakır", "Düzce", "Edirne", "Elazığ", "Erzincan", "Erzurum", 
+    "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkâri", "Hatay", "Iğdır", "Isparta", 
+    "İstanbul", "İzmir", "Kahramanmaraş", "Karabük", "Karaman", "Kars", "Kastamonu", 
+    "Kayseri", "Kilis", "Kırıkkale", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", 
+    "Malatya", "Manisa", "Mardin", "Mersin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", 
+    "Osmaniye", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Şanlıurfa", "Şırnak", 
+    "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Uşak", "Van", "Yalova", "Yozgat", "Zonguldak"
+                                ];
+            var availableSectors = [
+                "Hububat, Bakliyat, Yağlı Tohumlar ve Mamulleri",
+                "Yaş Meyve ve Sebze",
+                "Meyve Sebze Mamulleri",
+                "Kuru Meyve ve Mamulleri",
+                "Fındık ve Mamulleri",
+                "Zeytin ve Zeytinyağı",
+                "Tütün",
+                "Süs Bitkileri ve Mamuller",
+                "Su Ürünleri ve Hayvansal Mamuller",
+                "Mobilya, Kağıt ve Orman Ürünleri",
+                "Tekstil ve Hammaddeleri",
+                "Deri ve Deri Mamulleri",
+                "Halı",
+                "Kimyevi Maddeler ve Mamulleri",
+                "Hazırgiyim ve Konfeksiyon",
+                "Otomotiv Endüstrisi",
+                "Gemi, Yat ve Hizmetleri",
+                "Elektrik ve Elektronik",
+                "Makine ve Aksamları",
+                "Demir ve Demir Dışı Metaller",
+                "Çelik",
+                "Çimento Cam Seramik ve Toprak Ürünleri",
+                "Mücevher",
+                "Savunma ve Havacılık Sanayii",
+                "İklimlendirme Sanayii",
+                "Madencilik Ürünleri",
+                "Hizmet Sektörü"
+            ];
+            $("#p1q5").autocomplete({
+                source: availableSectors
+            });
+            $( "#p1q4" ).autocomplete({
+                source: availableCities
+            });
+        } );
+        </script>
 
 <script>
-    $('#survey-form').on('submit', function(e) {
-        e.preventDefault();  // prevent the form from being submitted
-        var formData = new FormData(this);
-        for(var pair of formData.entries()) {
-            console.log(pair[0]+ ', '+ pair[1]); 
+    function validateNumber(input) {
+      input.value = input.value.replace(/[^0-9]/g, '');
+    }
+  </script>
+
+
+<script>
+$(document).ready(function() {
+    // Function to check all questions are answered
+    function checkQuestions() {
+        console.log("START"); // Debug line
+        // Iterate over all cards
+        $('#firstAccordion .card, #secondAccordion .card').each(function() {
+            let allAnswered = true;
+
+            // Check radio groups
+            $(this).find('.question').each(function() {
+                if ($(this).find('input[type=radio]:checked').length === 0) {
+                    allAnswered = false;
+                }
+            });
+
+            // Additional checks for the first form only
+            if ($(this).hasClass('card')) {
+                const radioGroupNames = ["p1q1", "p1q2", "p1q3", "p1q10", "p1q6", "p1q12"];
+                const otherFields = ["p1q4", "p1q5", "p1q7", "p1q8", "p1q9", "p1q11", "p1q13"];
+                
+                // Check specific radio groups
+                radioGroupNames.forEach(function(groupName) {
+                    if (!$(`input[name="${groupName}"]:checked`).length) {
+                        allAnswered = false;
+                    }
+                });
+
+                // Check specific text fields
+                otherFields.forEach(function(fieldId) {
+                    if ($('#' + fieldId).val().trim() === "") {
+                        allAnswered = false;
+                    }
+                });
+
+                // Special case for 'otherTitle'
+                if ($('#p1q6_5').is(':checked') && $('#otherTitle').val().trim() === "") {
+                    allAnswered = false;
+                }
+            }
+
+        // Mark as completed or not
+        console.log(`All answered: ${allAnswered}`);  // Debug line
+        if (allAnswered) {
+            $(this).find('.toggle-collapse')
+                .removeClass('btn-primary')
+                .addClass('completed btn-success')
+                .text("Tamamlandı");
+        } else {
+            $(this).find('.toggle-collapse')
+                .removeClass('completed btn-success')
+                .addClass('btn-primary')
+                .text('Soruları Gör');
         }
-    });
+                });
+            }
+
+    // Run checkQuestions function on any input change
+    $('input[type=radio], input[type=text]').on('input change', checkQuestions);
+
+    // Run checkQuestions function on page load
+    checkQuestions();
+});
 </script>
-
-
-
+    <script>
+    /*    $("#survey-form").on("submit", function (event) {
+            event.preventDefault();
+            let formValues = $(this).serializeArray();
+            console.log(formValues); 
+    
+        $.ajax({
+                url: 'record.php',
+                type: 'POST',
+                data: formValues,
+            });
+        });
+        
+*/
+        
+    </script> 
 </body>
+
 </html>
+
+
